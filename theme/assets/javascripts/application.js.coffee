@@ -1,0 +1,2 @@
+$ ->
+  "Yep, it works!"
