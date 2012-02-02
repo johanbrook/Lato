@@ -1,10 +1,38 @@
-!!! 5
-%html(html_attrs())
-  %head= render_partial("layouts/head")
-  %body
-    .page-wrapper
-      %header.site-header= render_partial("layouts/header")
-      %section.site-content= yield()
-      %footer.site-footer= render_partial("layouts/footer")
-      = javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js")
-      = javascript_include_tag("application")
+<!DOCTYPE html>
+<html>
+<head>
+
+  / Charset
+  <meta charset="utf-8" />
+  
+  / Title
+  <title><?php echo get_page_title(bloginfo("name"), " - "); ?></title>
+  
+  / Stylesheets
+  = stylesheet_link_tag("master")
+  
+  / HTML5 Shiv
+  /[if lt IE 9]
+    = javascript_include_tag("http://html5shiv.googlecode.com/svn/trunk/html5.js")
+  
+  - wp_head()
+
+</head>
+
+<body>
+
+<header role="banner">
+  = render_partial("layouts/header");
+</header>
+
+<section role="main">
+
+  = yield()
+
+</section>
+
+
+= javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js")
+= javascript_include_tag("main")
+</body>
+</html>

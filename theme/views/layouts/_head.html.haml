@@ -1,11 +1,11 @@
 / Charset
-%meta(http-equiv="Content-type" content="text/html;charset=UTF-8")
+<meta charset="utf-8" />
 
 / Title
-%title= get_page_title(bloginfo('name'), " – ")
+<title><?php echo get_page_title(bloginfo("name"), " - "); ?></title>
 
 / Stylesheets
-= stylesheet_link_tag("screen")
+= stylesheet_link_tag("master")
 
 / HTML5 Shiv
 /[if lt IE 9]
