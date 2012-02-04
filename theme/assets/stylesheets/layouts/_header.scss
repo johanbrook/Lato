@@ -1,0 +1,29 @@
+[role="banner"] {
+	$width: $lineheight*3;
+	
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		height: $width;
+		width: $width;
+		margin: 0 auto;
+	}
+	
+	h1 a {
+		@include box-sizing(border-box);
+		@include border-radius(10em);
+		display: block;
+		height: 100%;
+		
+		line-height: 8em;
+		@include rem(16);
+		background-color: $accent;
+		color: #fff;
+		
+		text-decoration: none;
+		
+		&:hover{
+			background-color: $bodycolor;
+		}
+	}
+}

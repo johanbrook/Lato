@@ -1,0 +1,26 @@
+// Colours
+
+$accent:		#d5253e;
+$bodycolor:		#323232;
+$gray:			#7f7f7f;
+
+// Fonts
+
+$sans:			"Lato", "Helvetica Neue", Arial, sans-serif;
+$serif:			"PT Serif", Georgia, serif;
+
+
+// Measures
+
+$main_col:		61.8%;
+$side_col:		100% - $main_col;
+
+// Typography
+
+$size:			15;
+$leading:		24;
+
+$fontsize:		$size/16 * 1rem;
+$ratio:			$leading/$size;
+
+$lineheight:	$ratio*1em;

@@ -1,0 +1,9 @@
+/* COMMON SETTINGS FOR VARIOUS ELEMENTS */
+
+p, ul, ol, blockquote, figure {
+	margin-bottom: $lineheight;
+}
+
+small {
+	font-size: .9em;
+}

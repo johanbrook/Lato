@@ -1,0 +1,31 @@
+/* HELPER CLASSES */
+
+.desc {
+	color: $gray;
+	font-size: 1.1em;
+	
+	strong {
+		color: $bodycolor;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		font-family: $sans;
+	}
+}
+
+
+.meta {
+	color: $gray;
+}
+
+.sep {
+	color: $gray;
+	display: inline-block;
+	margin: 0 .3em;
+}
+
+
+/* Clearfix */
+
+.group{
+	@include clearfix;
+}

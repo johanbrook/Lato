@@ -22,8 +22,11 @@ if (!class_exists("Wordless")) {
  */
 
 if (is_single()) {
-  render_view("posts/single");
+	render_view("posts/single");
+
+} else if(is_home()){
+	render_view("posts/home");
 } else {
-  render_view("posts/archive");
+  	render_view("posts/archive");
 }
 

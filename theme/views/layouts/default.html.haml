@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
+		<meta charset="utf-8" />
 
-  / Charset
-  <meta charset="utf-8" />
-  
-  / Title
-  <title><?php echo get_page_title(bloginfo("name"), " - "); ?></title>
-  
-  / Stylesheets
-  = stylesheet_link_tag("master")
-  
-  / HTML5 Shiv
-  /[if lt IE 9]
-    = javascript_include_tag("http://html5shiv.googlecode.com/svn/trunk/html5.js")
-  
-  - wp_head()
+		<!-- Title -->
+		<title><?php echo get_page_title(bloginfo("name"), " - "); ?></title>
+    
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
-</head>
+		<!-- Stylesheet -->
+		= stylesheet_link_tag("master")
+		
+		<!-- Hashgrid -->
+		= stylesheet_link_tag("hashgrid")
+		<!--[if lt IE 9]>
+		= javascript_include_tag("http://html5shiv.googlecode.com/svn/trunk/html5.js")
+		<![endif]-->
+    
+		- wp_head()
+  
+	</head>
 
 <body>
 
-<header role="banner">
-  = render_partial("layouts/header");
-</header>
+	<div class="sidebar">
+		= render_partial("layouts/sidebar")
+	</div>
 
-<section role="main">
+	<section role="main">
 
-  = yield()
+		= yield()
 
-</section>
+	</section>
 
+
+	<footer role="contentinfo">
+		= render_partial("layouts/footer");
+	</footer>
 
 = javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js")
+= javascript_include_tag("jquery.hashgrid")
 = javascript_include_tag("main")
 </body>
 </html>

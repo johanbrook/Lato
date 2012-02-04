@@ -1,2 +1,1 @@
-$ ->
-  "Yep, it works!"
+grid = new hashgrid()

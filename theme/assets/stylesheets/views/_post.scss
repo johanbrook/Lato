@@ -1,0 +1,17 @@
+/* SINGLE POST */
+
+[role="article"]{
+	header {
+		h1 a {
+			color: inherit;
+			text-decoration: none;
+		}
+		
+		
+		.meta {
+			font-family: $sans;
+			text-transform: uppercase;
+		}
+	}
+	
+}

@@ -1,0 +1,46 @@
+
+
+@media screen and (max-width: 60em){
+	
+	body {
+		margin: $lineheight 15%;
+	}
+	
+	[role="banner"] {
+		margin-bottom: $lineheight;
+		
+		h1 {
+			margin: 0;
+			height: auto;
+			width: auto;
+		}
+		
+		h1 a{
+			background: none;
+			color: $bodycolor;
+			line-height: 1;
+			display: inline;
+			height: auto;
+			
+			&:hover{
+				color: inherit;
+				background: inherit;
+			}
+		}
+	}
+	
+	[role="main"],
+	.sidebar {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+}
+
+
+@media screen and (max-width: 479px){
+	body {
+		margin-left: 8%;
+		margin-right: 8%;
+	}
+}
