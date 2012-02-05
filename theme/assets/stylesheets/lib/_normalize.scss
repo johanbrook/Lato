@@ -170,7 +170,7 @@ h6 {
  */
 
 abbr[title] {
-	border-bottom: 1px dotted;
+	border-bottom: 1px dotted #ddd;
 }
 
 /*
@@ -183,7 +183,7 @@ strong {
 }
 
 blockquote {
-	margin: 1em 40px;
+	margin: 0;
 }
 
 /*
@@ -279,11 +279,12 @@ sub {
 ul,
 ol {
 	margin-left: 0;
-	padding: 0 0 0 40px;
+	padding: 0;
+	list-style: outside square;
 }
 
 dd {
-	margin: 0 0 0 40px;
+	margin: 0;
 }
 
 nav ul,

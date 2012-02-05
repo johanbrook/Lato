@@ -1,0 +1,66 @@
+[role="navigation"] {
+	margin-top: $lineheight*2;
+	font-family: $sans;
+	color: #9f9f9f;
+	text-transform: uppercase;
+	font-size: .8em;
+	
+	ul {
+		max-width: 70%;
+		margin: 0 auto;
+	}
+	
+	li {
+		display: inline-block;
+		width: 48%;
+		border: 1px solid #ddd;
+		border-width: 0 0 1px 1px;
+		
+		&:nth-child(odd){
+			border-left: 0;
+		}
+		
+		&:last-child, &:nth-child(3){
+			border-bottom: 0;
+		}
+		
+		a {
+			display: block;
+			line-height: $lineheight*2;
+			
+			&:hover {
+				color: #fff;
+				background: $accent;
+				text-decoration: none;
+				text-shadow: rgba(0,0,0, 0.3) 0 -1px 0;
+			}
+			
+			&:active {
+				top: auto;
+				@include box-shadow(inset rgba(0, 0, 0, 0.6) 0 0 .5em);
+			}
+		}
+	}
+	
+	
+	.secondary-nav {
+		$space: .3em;
+		
+		font-family: $sans;
+		text-transform: uppercase;
+		font-size: .8em;
+		
+		li {
+			margin-right: 4%;
+			
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		
+		a {
+			color: #9f9f9f;
+		}
+	}
+	
+}

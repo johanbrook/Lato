@@ -1,0 +1,33 @@
+@import "header";
+@import "navigation";
+
+.sidebar {
+	text-align: center;
+	
+	h2 {
+		@include rem(12);
+		color: #444;
+		text-transform: uppercase;
+	}
+	
+	dd {
+		margin-bottom: $lineheight/2;
+	}
+	
+	.links {
+		span {
+			display: block;
+		}
+		
+		li {
+			margin-bottom: $lineheight / 2;
+		}
+	}
+	
+	section {
+		color: lighten($gray, 10%);
+		@include rem(14, false);
+		width: 80%;
+		margin: $lineheight*2 auto 0;
+	}
+}

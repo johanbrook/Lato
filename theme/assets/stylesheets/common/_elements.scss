@@ -1,9 +1,122 @@
 /* COMMON SETTINGS FOR VARIOUS ELEMENTS */
 
-p, ul, ol, blockquote, figure {
+img,
+object,
+embed,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+p, ul, ol, blockquote, figure, pre, dl {
 	margin-bottom: $lineheight;
 }
 
 small {
 	font-size: .9em;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	width: 10%;
+	background-color: #cecece;
+	margin: $lineheight 0;
+}
+
+dt {
+	font-family: $sans;
+}
+
+strong, figcaption {
+	font-family: $sans;
+}
+
+del, figcaption {
+	color: $gray;
+}
+
+
+blockquote {
+	font-family: $sans;
+	color: $gray;
+	border-left: 2px solid $accent;
+	padding: 0 5%;
+}
+
+
+/* HEADINGS */
+
+h1, h2, h3, h4, h5 {
+	font-family: $sans;
+	font-weight: bold;
+	color: #000;
+	@include smooth;
+}
+
+.huge {
+	@include rem(39);
+}
+
+h1 {
+	@include rem(28);
+	margin-bottom: 1em;
+}
+
+h2 {
+	@include rem(24);
+}
+
+h3 {
+	@include rem(18);
+	color: $gray;
+}
+
+h4 {
+	@include rem(14);
+}
+
+
+/* LINKS */
+
+a, a:visited {
+	color: $accent;
+	text-decoration: none;
+	position: relative;
+}
+
+a:hover {
+	color: darken($accent, 10%);
+	text-decoration: underline;
+}
+
+a:active {
+	top: 1px;
+}
+
+
+
+/* CODE */
+
+pre, code {
+	font-family: $mono;
+}
+
+code {
+	background-color: #eee;
+	border-bottom: 1px solid #ddd;
+	padding: 0 .2em;
+}
+
+pre {
+	background-color: #222;
+	color: #fff;
+	padding: $lineheight 3%;
+	font-size: .9em;
+	
+	code {
+		background: none;
+		border: 0;
+		padding: 0;
+	}
 }

@@ -12,9 +12,16 @@
 }
 
 
-@mixin rem($target, $prop: "font-size") {
+@mixin rem($target, $include-lineheight: true, $prop: "font-size") {
 	#{unquote($prop)}: #{$target}px; 	/* Fallback */
 	#{unquote($prop)}: #{$target/16}rem;
+	
+	@if $include-lineheight == true{
+		
+		@if $target > 20 {
+			line-height: 1.168;
+		}
+	}
 }
 
 

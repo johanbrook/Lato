@@ -5,7 +5,7 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
   <head>
   <meta charset="utf-8" />
   <!-- Title -->
-  <title><?php echo get_page_title(bloginfo("name"), " - "); ?></title>
+  <title><?php wp_title(" - ", true, "right"); ?>Johan Brook</title>
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <!-- Stylesheet -->
@@ -20,7 +20,7 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
   <![endif]-->
   <?php wp_head(); ?>
   </head>
-  <body>
+  <body <?php echo body_class();?>>
   <div class="sidebar">
   <?php echo render_partial("layouts/sidebar"); ?>
 

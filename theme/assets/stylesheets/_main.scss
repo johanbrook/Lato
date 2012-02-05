@@ -36,52 +36,9 @@ body {
 }
 
 
-/* HEADINGS */
-
-h1, h2, h3, h4, h5 {
-	font-family: $sans;
-	font-weight: bold;
-	color: #000;
-	@include smooth;
-}
-
-.huge {
-	@include rem(39);
-}
-
-h1 {
-	@include rem(28);
-	margin-bottom: 1em;
-	line-height: 28/$leading;
-}
-
-h2 {
-	@include rem(24);
-}
-
-h3 {
-	@include rem(18);
-}
-
-h4 {
-	@include rem(14);
-}
-
-
-/* LINKS */
-
-a, a:visited {
-	color: $accent;
-	text-decoration: none;
-}
-
-a:hover {
-	color: darken($accent, 10%);
-	text-decoration: underline;
-}
-
-
-@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "views/home";
 @import "views/post";
 
 

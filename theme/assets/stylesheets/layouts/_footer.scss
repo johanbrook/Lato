@@ -1,0 +1,14 @@
+[role="contentinfo"] {
+	clear: both;
+	text-align: right;
+	font-family: $sans;
+	color: $gray;
+	
+	hr {
+		float: right;
+	}
+	
+	p {
+		clear: right;
+	}
+}

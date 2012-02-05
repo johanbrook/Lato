@@ -2,7 +2,6 @@
 	$width: $lineheight*3;
 	
 	h1 {
-		text-align: center;
 		text-transform: uppercase;
 		height: $width;
 		width: $width;
@@ -16,14 +15,22 @@
 		height: 100%;
 		
 		line-height: 8em;
-		@include rem(16);
+		@include rem(16, false);
 		background-color: $accent;
 		color: #fff;
+		text-shadow: rgba(0,0,0, 0.3) 0 -1px 0;
 		
 		text-decoration: none;
 		
 		&:hover{
 			background-color: $bodycolor;
+		}
+		
+		&.gotohome {
+			background-image: image-url("home.svg");
+			background-repeat: no-repeat;
+			background-position: center center;
+			text-indent: -999em;
 		}
 	}
 }

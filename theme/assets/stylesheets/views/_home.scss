@@ -1,0 +1,10 @@
+.home {
+	
+	[role="article"] {
+		margin-bottom: $lineheight*4;
+		
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}

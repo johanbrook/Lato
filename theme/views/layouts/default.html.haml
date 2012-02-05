@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 
 		<!-- Title -->
-		<title><?php echo get_page_title(bloginfo("name"), " - "); ?></title>
+		<title><?php wp_title(" - ", true, "right"); ?>Johan Brook</title>
     
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
   
 	</head>
 
-<body>
+<body <?php echo body_class();?>>
 
 	<div class="sidebar">
 		= render_partial("layouts/sidebar")

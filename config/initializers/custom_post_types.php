@@ -18,7 +18,12 @@ function add_custom_taxonomies() {
   // new_taxonomy("work_type", array('portfolio_work'));
 }
 
+function add_post_formats(){
+	add_theme_support( 'post-formats', array( 'link' ) );
+}
+
 add_action('init', 'add_custom_post_types');
 add_action('init', 'add_custom_taxonomies');
+add_action('init', 'add_post_formats');
 
 

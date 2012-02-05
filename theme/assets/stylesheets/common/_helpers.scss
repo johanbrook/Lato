@@ -1,6 +1,6 @@
 /* HELPER CLASSES */
 
-.desc {
+.ingress {
 	color: $gray;
 	font-size: 1.1em;
 	
@@ -8,7 +8,6 @@
 		color: $bodycolor;
 		text-transform: uppercase;
 		letter-spacing: .1em;
-		font-family: $sans;
 	}
 }
 
@@ -24,8 +23,70 @@
 }
 
 
+.suphead {
+	font-family: $sans;
+	font-style: normal;
+	@include rem(13);
+	position: relative;
+	cursor: help;
+	display: block;
+	
+	.label {
+		text-transform: uppercase;
+		color: #1CA4FF;
+	}
+	
+	.link-url {
+		@include transition(width, .7s, cubic-bezier(0.190, 1.000, 0.220, 1.000), .8s);
+		width: 0;
+		top: 0;
+		left: 60px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		display: inline-block;
+		color: $accent;
+	}
+}
+
+@media all and (min-width: 600px){
+	header:hover .link-url{
+		width: 100%;
+	}
+}
+
+
+
+.more-link::after {
+	
+}
+
+
+/* Lists */
+
+.horizontal li{
+	display: inline-block;
+}
+
+.bare {
+	list-style: none;
+}
+
+
 /* Clearfix */
 
 .group{
 	@include clearfix;
+}
+
+
+/* Handy classes */
+
+.hidden {
+	display: none;
+}
+
+.visuallyhidden {
+	position: absolute;
+	left: -999em;
 }

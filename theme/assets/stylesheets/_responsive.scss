@@ -35,6 +35,27 @@
 		width: auto;
 		margin: 0;
 	}
+	
+	.sidebar {
+		
+		section {
+			width: 100%;
+		}
+		
+		.links {
+			@include clearfix;
+			text-align: left;
+			
+			li {
+				float: left;
+				width: 33%;
+			}
+			
+			& ~ small {
+				display: none;
+			}
+		}
+	}
 }
 
 
@@ -42,5 +63,12 @@
 	body {
 		margin-left: 8%;
 		margin-right: 8%;
+	}
+	
+	.sidebar{
+		
+		.links{
+			display: none;
+		}
 	}
 }
