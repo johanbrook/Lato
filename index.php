@@ -9,6 +9,8 @@ if (!class_exists("Wordless")) {
   die();
 }
 
+
+
 /*
  * In this page, you need to setup Wordless routing: you first
  * determine the type of the page using WordPress conditional tags,
@@ -28,6 +30,10 @@ if (is_single()) {
 	render_view("layouts/home");
 } else if(is_page()){
 	render_view("layouts/page");
+} else if(is_archive()){
+	render_view("layouts/archive");
+} else if(is_404()) {
+	render_view("layouts/404");
 } else {
   	render_view("posts/archive");
 }

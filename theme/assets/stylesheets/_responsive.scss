@@ -65,10 +65,28 @@
 		margin-right: 8%;
 	}
 	
+	[role="navigation"] {
+		max-width: none;
+		margin: $lineheight 0 0;
+		
+		li {
+			width: 24%;
+		}
+	}
+	
 	.sidebar{
 		
 		.links{
 			display: none;
+		}
+	}
+	
+	[role="contentinfo"] {
+		text-align: center;
+		
+		hr {
+			float: none;
+			margin: 0 auto;
 		}
 	}
 }

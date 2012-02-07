@@ -19,7 +19,7 @@ function add_custom_taxonomies() {
 }
 
 function add_post_formats(){
-	add_theme_support( 'post-formats', array( 'link' ) );
+	add_theme_support( 'post-formats', array('post', 'link' ) );
 }
 
 add_action('init', 'add_custom_post_types');

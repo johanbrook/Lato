@@ -1,44 +1,45 @@
 [role="navigation"] {
-	margin-top: $lineheight*2;
 	font-family: $sans;
 	color: #9f9f9f;
 	text-transform: uppercase;
 	font-size: .8em;
-	
-	ul {
-		max-width: 70%;
-		margin: 0 auto;
-	}
+	border-bottom: 3px double #ddd;
+	max-width: 70%;
+	margin: $lineheight*2 auto;
 	
 	li {
 		display: inline-block;
 		width: 48%;
-		border: 1px solid #ddd;
-		border-width: 0 0 1px 1px;
+		margin-bottom: 1px;
 		
 		&:nth-child(odd){
 			border-left: 0;
 		}
 		
-		&:last-child, &:nth-child(3){
+		&:last-child, &:nth-child(5){
 			border-bottom: 0;
 		}
 		
 		a {
 			display: block;
 			line-height: $lineheight*2;
+			@include border-radius(.3em);
 			
 			&:hover {
 				color: #fff;
 				background: $accent;
 				text-decoration: none;
-				text-shadow: rgba(0,0,0, 0.3) 0 -1px 0;
 			}
 			
-			&:active {
-				top: auto;
-				@include box-shadow(inset rgba(0, 0, 0, 0.6) 0 0 .5em);
-			}
+			
+		}
+		
+		&.current_page_item a,
+		a:active {
+			top: auto;
+			background: $accent;
+			color: #fff;
+			@include box-shadow(inset rgba(0, 0, 0, 0.6) 0 0 .5em);
 		}
 	}
 	

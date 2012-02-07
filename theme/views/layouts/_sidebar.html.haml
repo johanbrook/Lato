@@ -10,17 +10,11 @@
 <aside role="complementary">
 	
 	<nav role="navigation">		
-		<ul>
-			
-			<?php
-				$links = array("About me", "Archive", "Projects", "Colophon");
-				
-				foreach($links as $l){
-					echo '<li><a href="#">'.$l.'</a></li>';
-				}
-			?>
-			
-		</ul>
+		<?php wp_nav_menu(array(
+			"theme_location" => "main_menu",
+			"container" => false,
+			"items_wrap" => '<ul>%3$s</ul>'
+		));?>
 	</nav>
 	
 	- if(is_single())

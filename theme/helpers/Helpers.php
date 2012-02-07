@@ -32,6 +32,8 @@ function link_to_page($page_slug, $echo = true){
 
 
 
+
+
 /**
 *	Returns the ID of a page from the slug.
 *
@@ -43,6 +45,23 @@ function get_id_by_slug($page_slug) {
         return $page->ID;
 	else
         return null;
+}
+
+
+function add_google_analytics_async($id){?>
+	
+	<script>
+	 var _gaq = [['_setAccount', '<?php echo $id; ?>'], ['_trackPageview']];
+	 (function(d, t) {
+	  var g = d.createElement(t),
+	      s = d.getElementsByTagName(t)[0];
+	  g.async = 1;
+	  g.src = '//www.google-analytics.com/ga.js';
+	  s.parentNode.insertBefore(g, s);
+	 }(document, 'script'));
+	</script>
+
+<?php
 }
 
 ?>
