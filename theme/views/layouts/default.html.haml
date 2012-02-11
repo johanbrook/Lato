@@ -25,7 +25,7 @@
 <body <?php echo body_class();?>>
 
 	<div class="sidebar">
-		= render_partial("layouts/sidebar")
+		= render_partial("partials/sidebar")
 	</div>
 
 	<section role="main">
@@ -36,7 +36,7 @@
 
 
 	<footer role="contentinfo">
-		= render_partial("layouts/footer");
+		= render_partial("partials/footer");
 	</footer>
 
 = javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js")
