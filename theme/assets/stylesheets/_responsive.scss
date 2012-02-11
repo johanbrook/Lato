@@ -81,6 +81,13 @@
 		}
 	}
 	
+	
+	/* Make 'read more' links looks like buttons: */
+	.read-more {
+		@include jb_button;
+		display: block;
+	}
+	
 	[role="contentinfo"] {
 		text-align: center;
 		

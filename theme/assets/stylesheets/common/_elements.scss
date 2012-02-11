@@ -79,7 +79,7 @@ h4 {
 
 /* LINKS */
 
-a, a:visited {
+a {
 	color: $accent;
 	text-decoration: none;
 	position: relative;
@@ -92,6 +92,10 @@ a:hover {
 
 a:active {
 	top: 1px;
+}
+
+a.read-more {
+	font-size: 1.1em;
 }
 
 

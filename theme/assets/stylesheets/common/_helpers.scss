@@ -33,19 +33,29 @@
 	
 	.label {
 		text-transform: uppercase;
-		color: #1CA4FF;
+		color: #fff;
+		font-size: .8em;
+		@include border-radius(.2em);
+		background-color: $accent;
+		padding: 1px .3em;
+		border: 1px solid transparent;
+		
+		&:hover {
+			background-color: darken($accent, 10%);
+			border-color: darken($accent, 20%);
+		}
 	}
 	
 	.link-url {
 		@include transition(width, .7s, cubic-bezier(0.190, 1.000, 0.220, 1.000), .8s);
 		width: 0;
 		top: 0;
-		left: 60px;
+		left: 9%;
 		overflow: hidden;
 		position: absolute;
 		white-space: nowrap;
 		display: inline-block;
-		color: $accent;
+		color: $gray;
 	}
 }
 
@@ -68,7 +78,7 @@
 	display: inline-block;
 }
 
-.bare {
+.list {
 	list-style: none;
 }
 
@@ -81,6 +91,32 @@
 
 
 /* Handy classes */
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignmiddle {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .hidden {
 	display: none;
