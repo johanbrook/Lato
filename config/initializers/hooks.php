@@ -115,7 +115,7 @@ function custom_excerpt( $output ) {
 *	@return String: The formatted link with an ellipsis in the front.
 */
 function read_more_link() {
-	$link = ' &hellip; <p class="right"><a class="button" href="%2$s">%1$s →</a></p>';
+	$link = ' &hellip; <p class="right"><a class="read-more" href="%2$s">%1$s →</a></p>';
 	
 	return sprintf($link, __("Read more"), get_permalink());
 }
