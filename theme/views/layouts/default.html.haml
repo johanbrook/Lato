@@ -39,8 +39,16 @@
 		= render_partial("partials/footer");
 	</footer>
 
-= javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js")
-= javascript_include_tag("jquery.hashgrid")
+- wp_footer()
+
+- if(ENV == ENV_DEVELOPMENT):
+	= javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js")
+	= javascript_include_tag("jquery.hashgrid")
+	<script type="text/javascript">
+		var grid = new hashgrid();
+	</script>
+- endif;
+
 = javascript_include_tag("main")
 </body>
 </html>
