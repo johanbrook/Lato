@@ -64,4 +64,66 @@ function add_google_analytics_async($id){?>
 <?php
 }
 
+
+/**
+*	List posts by month
+*/
+
+function list_posts_by_month($list_class_name){
+	// Declare some helper vars
+	$previous_year = $year = 0;
+	$previous_month = $month = 0;
+	$ul_open = false;
+
+	// Get the posts
+	$myposts = get_posts('numberposts=-1&orderby=post_date&order=DESC');
+	
+	echo '<ol class="'.$list_class_name.'">';
+	
+	?>
+
+	<?php foreach($myposts as $p) : ?>	
+
+		<?php
+
+		$year = mysql2date('Y', $p->post_date);
+		$month = mysql2date('n', $p->post_date);
+		$day = mysql2date('j', $p->post_date);
+		
+		$format = (get_the_time("Y", $p) == date("Y")) ? "F" : "F Y";
+
+		?>
+
+		<?php if($year != $previous_year || $month != $previous_month) : ?>
+
+			<?php if($ul_open == true) : ?>
+			</ol>
+			
+			</li>
+			
+			<?php endif; ?>
+			
+			<li>
+			
+			<h3><?php echo get_the_time($format, $p); ?></h3>
+
+			<ol class="<?php echo $list_class_name;?>">
+
+			<?php $ul_open = true; ?>
+
+		<?php endif; ?>
+
+		<?php $previous_year = $year; $previous_month = $month; ?>
+
+		<li><a rel="bookmark" href="<?php echo get_permalink($p); ?>"><?php echo get_the_title($p); ?></a></li>
+
+	<?php endforeach; ?>
+		</ol>
+		
+		</ol>
+		
+<?php }
+
+
+
 ?>
