@@ -1,7 +1,7 @@
 <header role="banner">
 	<h1>
 		- if(is_home())
-			= link_to(get_bloginfo("name"), get_bloginfo("url"))
+			= link_to("Johan Brook", get_bloginfo("url"))
 		- else
 			= link_to(get_bloginfo("name"), get_bloginfo("url"), array("class" => "gotohome", "title" => "Back to front page"))
 	</h1>
