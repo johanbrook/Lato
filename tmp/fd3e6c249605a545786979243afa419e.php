@@ -22,7 +22,7 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
   </head>
   <body <?php echo body_class();?>>
   <div class="sidebar">
-  <?php echo render_partial("layouts/sidebar"); ?>
+  <?php echo render_partial("partials/sidebar"); ?>
 
   </div>
   <section role="main">
@@ -30,7 +30,7 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
 
   </section>
   <footer role="contentinfo">
-  <?php echo render_partial("layouts/footer");; ?>
+  <?php echo render_partial("partials/footer");; ?>
 
   </footer>
   <?php echo javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"); ?>
