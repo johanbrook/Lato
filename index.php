@@ -23,18 +23,41 @@ if (!class_exists("Wordless")) {
  * For a list of conditional tags, please see here: http://codex.wordpress.org/Conditional_Tags
  */
 
+$routes = array(
+	"single" => "posts/single",
+	"home" => "layouts/home",
+	"page('archive')" => "layouts/archive",
+	"archive" => "layouts/archive",
+	"page" => "layouts/page",
+	"404" => "layouts/404",
+	"default" => "layouts/page"
+);
+
+foreach($routes as $page => $view) {
+	$page = ( strpos($page, ")") === false) ? $page."()" : $page;
+	$current_route_is = create_function('$key', 'return is_'.$page.';');
+
+	if($current_route_is($page)) {		
+		render_view($view);
+		break;
+	}
+}
+
+/*
 if (is_single()) {
 	render_view("posts/single");
 
 } else if(is_home()){
 	render_view("layouts/home");
-} else if(is_page()){
-	render_view("layouts/page");
 } else if(is_archive()){
 	render_view("layouts/archive");
+} else if(is_page("archive")) {
+	render_view("layouts/archive");
+} else if(is_page()){
+	render_view("layouts/page");
 } else if(is_404()) {
 	render_view("layouts/404");
 } else {
   	render_view("posts/archive");
-}
+}*/
 
