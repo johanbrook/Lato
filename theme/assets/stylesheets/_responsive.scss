@@ -82,6 +82,15 @@
 	}
 	
 	
+	#contact table {
+		td:nth-child(4n+1),
+		th:nth-child(4n+1),
+		td:nth-child(4n+3),
+		th:nth-child(4n+3){
+			display: none;
+		}
+	}
+	
 	/* Make 'read more' links looks like buttons: */
 	.read-more {
 		@include jb_button;
