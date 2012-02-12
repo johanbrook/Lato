@@ -29,7 +29,9 @@
 			= sep()
 			<a href="<?php the_permalink();?>">Permalink</a>
 			= sep()
-			Shortlink: <a href="<?php the_shortlink();?>"><?php the_shortlink();?></a>
+			- if(the_shortlink()):
+				Shortlink: <a href="<?php the_shortlink();?>"><?php the_shortlink();?></a>
+			- endif;
 		</small>
 	</header>
 	
