@@ -13,11 +13,21 @@ end
 
 desc "Compile CoffeeScript for production"
 task :coffee do
-  puts `coffee -o assets/javascripts -c #{js_file}`
+  puts `coffee -o #{File.join output_dir, "javascripts"} -c #{js_file}`
   puts "* CoffeeScript compiled"
 end
 
 desc "Deploy to johanbrook.com"
-task :deploy => :sass do
+task :deploy => [:sass, :coffee] do
+  files = [
+    "theme/assets/stylesheets",
+    "theme/assets/javascripts",
+    File.join(output_dir, "stylesheets/master.css"),
+    File.join(output_dir, "javascripts/main.js")
+  ]
+  
+  puts `git commit #{files.join(" ")} -m "*Deploy* (Force compile SCSS and CoffeeScript files)"`
+        
+#  puts `git push origin master`
   puts "* Deployed"
 end
