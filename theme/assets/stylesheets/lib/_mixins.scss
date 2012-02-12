@@ -1,11 +1,3 @@
-@mixin jb_transition($args) {
-	-webkit-transition: $args;
-	-moz-transition: $args;
-	-o-transition: $args;
-	-ms-transition: $args;
-	transition: $args;
-}
-
 @mixin smooth($state: true){
 	@if $state == true{
 	

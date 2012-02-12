@@ -6,7 +6,7 @@ output_dir = "./assets/"
 
 desc "Compile Sass for production"
 task :sass do
-  puts `sass #{scss_file}:#{File.join output_dir, "stylesheets/master.css" } -f -t compressed`
+  puts `sass #{scss_file}:#{File.join output_dir, "stylesheets/master.css" } -r ./theme/assets/stylesheets/bourbon/lib/bourbon.rb -f -t compressed`
   puts "* Sass compiled for production"
 end
 
