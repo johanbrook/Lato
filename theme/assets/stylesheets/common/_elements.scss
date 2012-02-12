@@ -42,6 +42,13 @@ blockquote {
 	color: $gray;
 	border-left: 2px solid $accent;
 	padding: 0 5%;
+	
+	footer {
+		font-family: $serif;
+		font-size: .9em;
+		font-style: italic;
+		color: $bodycolor;
+	}
 }
 
 
