@@ -24,7 +24,11 @@ scrollToContentOnSingle = ->
 
 # Run
 
-if navigator.userAgent.match /iPhone/i or navigator.userAgent.match /iPad/i
-	preventAutoscale()
-	hideAddressBar()
-	scrollToContentOnSingle()
+init = ->
+	if navigator.userAgent.match /iPhone/i or navigator.userAgent.match /iPad/i
+		preventAutoscale()
+		hideAddressBar()
+		scrollToContentOnSingle()
+
+
+document.addEventListener "DOMContentLoaded", init, false

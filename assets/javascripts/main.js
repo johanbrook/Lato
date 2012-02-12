@@ -1,5 +1,5 @@
 (function() {
-  var hideAddressBar, preventAutoscale, scrollToContentOnSingle;
+  var hideAddressBar, init, preventAutoscale, scrollToContentOnSingle;
 
   preventAutoscale = function() {
     var viewportmeta;
@@ -28,10 +28,14 @@
     }
   };
 
-  if (navigator.userAgent.match(/iPhone/i || navigator.userAgent.match(/iPad/i))) {
-    preventAutoscale();
-    hideAddressBar();
-    scrollToContentOnSingle();
-  }
+  init = function() {
+    if (navigator.userAgent.match(/iPhone/i || navigator.userAgent.match(/iPad/i))) {
+      preventAutoscale();
+      hideAddressBar();
+      return scrollToContentOnSingle();
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", init, false);
 
 }).call(this);
