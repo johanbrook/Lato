@@ -48,18 +48,18 @@ function get_id_by_slug($page_slug) {
 }
 
 
-function add_google_analytics_async($id){?>
+function add_google_analytics_async(){?>
 	
-	<script>
-	 var _gaq = [['_setAccount', '<?php echo $id; ?>'], ['_trackPageview']];
-	 (function(d, t) {
-	  var g = d.createElement(t),
-	      s = d.getElementsByTagName(t)[0];
-	  g.async = 1;
-	  g.src = '//www.google-analytics.com/ga.js';
-	  s.parentNode.insertBefore(g, s);
-	 }(document, 'script'));
-	</script>
+<script>
+	var _gaq = [['_setAccount', '<?php echo GOOGLE_ANALYTICS_ID; ?>'], ['_trackPageview']];
+	(function(d, t) {
+		var g = d.createElement(t),
+		s = d.getElementsByTagName(t)[0];
+		g.async = 1;
+		g.src = '//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g, s);
+	}(document, 'script'));
+</script>
 
 <?php
 }

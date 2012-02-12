@@ -10,7 +10,7 @@ add_filter('the_excerpt_rss', 'jb_add_permalink_to_content');
 add_filter('the_shortlink', 'my_shortlink', 10, 4 );
 add_filter('body_class','browser_body_class');
 
-add_action('init', 'remove_head_links');
+add_action('init', 		'remove_head_links');
 add_shortcode("heroes", "heroes_shortcode");
 
 
