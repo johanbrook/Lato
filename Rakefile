@@ -28,6 +28,6 @@ task :deploy => [:sass, :coffee] do
   
   puts `git commit #{files.join(" ")} -m "*Deploy* (Force compile SCSS and CoffeeScript files)"`
         
-#  puts `git push origin master`
+  puts `git push origin master`
   puts "* Deployed"
 end
