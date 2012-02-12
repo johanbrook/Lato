@@ -17,7 +17,7 @@ task :coffee do
   puts "* CoffeeScript compiled"
 end
 
-desc "Deploy to johanbrook.com"
+desc "Deploys to johanbrook.com. Auto-compile and commit all SCSS and Coffee files."
 task :deploy => [:sass, :coffee] do
   files = [
     "theme/assets/stylesheets",
