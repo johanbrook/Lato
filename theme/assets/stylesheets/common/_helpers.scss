@@ -47,7 +47,7 @@
 	}
 	
 	.link-url {
-		@include transition(width, .7s, cubic-bezier(0.190, 1.000, 0.220, 1.000), .8s);
+		@include jb_transition(width .7s cubic-bezier(0.190, 1.000, 0.220, 1.000) .8s);
 		width: 0;
 		top: 0;
 		left: 9%;

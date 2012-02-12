@@ -2,5 +2,7 @@ tmp
 tmp/
 tmp/*
 ./tmp
+.sass-cache
+.sass-cache/*
 .DS_Store
 */.DS_Store
