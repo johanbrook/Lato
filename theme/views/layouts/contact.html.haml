@@ -1,0 +1,77 @@
+<?php
+
+	$services = array(
+		array(
+			"name" => "Twitter",
+			"username" => "johanbrook",
+			"url" => "twitter.com/johanbrook"
+		),
+		array(
+			"name" => "GitHub",
+			"username" => "johanbrook",
+			"url" => "github.com/johanbrook"
+		),
+		array(
+			"name" => "Dribbble",
+			"username" => "johan",
+			"url" => "dribbble.com/johan"
+		),
+		array(
+			"name" => "Tumblr",
+			"username" => "johanbrook",
+			"url" => "log.johanbrook.com"
+		),
+		array(
+			"name" => "Flickr",
+			"username" => "johanbrook",
+			"url" => "flickr.com/photos/johanbrook"
+		),
+		array(
+			"name" => "Last.fm",
+			"username" => "johanbrook",
+			"url" => "last.fm/user/johanbrook"
+		),
+		array(
+			"name" => "LinkedIn",
+			"username" => "Johan Brook",
+			"url" => "se.linkedin.com/in/johanbrook"
+		),
+	);
+
+?>
+
+
+- the_post()
+
+<article>
+	<h1>
+		= the_title()
+	</h1>
+	
+	<div class="post-text">
+		= get_the_filtered_content()
+	</div>
+	
+	<table summary="Social services I'm a member at">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Service</th>
+				<th>Username</th>
+				<th>URL</th>
+			</tr>
+		</thead>
+	
+		<tbody>
+			<?php foreach($services as $service):?>
+			<tr>
+				<td><?php echo image_tag(strtolower($service['name']).".png");?></td>
+				<td><?php echo $service['name'];?></td>
+				<td><?php echo $service['username'];?></td>
+				<td><a href="http://<?php echo $service['url'];?>"><?php echo $service['url'];?></a></td>
+			</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+
+</article>

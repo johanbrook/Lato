@@ -27,6 +27,7 @@ $routes = array(
 	"single" => "posts/single",
 	"home" => "layouts/home",
 	"page('archive')" => "layouts/archive",
+	"page('contact')" => "layouts/contact",
 	"archive" => "layouts/archive",
 	"page" => "layouts/page",
 	"404" => "layouts/404",

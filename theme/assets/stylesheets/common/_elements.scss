@@ -52,6 +52,30 @@ blockquote {
 }
 
 
+/* TABLES */
+
+table {
+	width: 100%;
+}
+
+th {
+	font-family: $sans;
+	text-align: left;
+}
+
+tbody tr {
+	border-top: 1px dotted #ccc;
+	
+	&:hover {
+		background-color: transparentize($accent, .9);
+	}
+}
+
+td, th {
+	padding: .5em .3em;
+}
+
+
 /* HEADINGS */
 
 h1, h2, h3, h4, h5 {
