@@ -16,6 +16,7 @@ add_shortcode("heroes", "heroes_shortcode");
 
 if(ENV == ENV_PRODUCTION){
 	add_action('wp_head', 'add_google_analytics_async');
+	add_action('wp_head', 'add_google_verification');
 }
 
 
@@ -171,4 +172,25 @@ function jb_add_permalink_to_content($content){
 	}
 	
 	return $content;
+}
+
+
+function add_google_verification() {
+	echo '<meta name="google-site-verification" content="yse2zGxAJCJEAjDDhZioKi3pVSKIB8zWjfXeAQXePkU" />';
+}
+
+function add_google_analytics_async(){?>
+	
+<script>
+	var _gaq = [['_setAccount', '<?php echo GOOGLE_ANALYTICS_ID; ?>'], ['_trackPageview']];
+	(function(d, t) {
+		var g = d.createElement(t),
+		s = d.getElementsByTagName(t)[0];
+		g.async = 1;
+		g.src = '//www.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g, s);
+	}(document, 'script'));
+</script>
+
+<?php
 }
