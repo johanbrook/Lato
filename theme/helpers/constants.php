@@ -15,7 +15,8 @@ $allowed_sites = array(
 	"johanbrook.dev",
 	"localhost"
 );
-$env = (in_array($host, $allowed_sites) || (isset($_GET['dev']) && $_GET['dev'] == 1)) ? ENV_DEVELOPMENT : ENV_PRODUCTION;
+$env = (in_array($host, $allowed_sites) || (isset($_GET['dev']) && $_GET['dev'] == 1)) 
+	? ENV_DEVELOPMENT : ENV_PRODUCTION;
 
 define("ENV", $env);
 

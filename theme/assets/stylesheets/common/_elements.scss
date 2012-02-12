@@ -52,6 +52,10 @@ h1, h2, h3, h4, h5 {
 	font-weight: bold;
 	color: #000;
 	@include smooth;
+	
+	a:hover {
+		background: none;
+	}
 }
 
 .huge {
@@ -86,7 +90,8 @@ a {
 }
 
 a:hover {
-	color: darken($accent, 10%);
+	color: darken($accent, 5%);
+	background-color: transparentize($accent, .95);
 	text-decoration: underline;
 }
 
@@ -123,4 +128,11 @@ pre {
 		border: 0;
 		padding: 0;
 	}
+}
+
+kbd {
+	font: bold .8em/#{$ratio} $sans;
+	background-color: #eee;
+	padding: 0 2px;
+	text-transform: uppercase;
 }

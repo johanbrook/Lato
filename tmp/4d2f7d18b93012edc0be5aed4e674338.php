@@ -30,6 +30,9 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
   <?php echo sep(); ?>
 
   <a href="<?php the_permalink();?>">Permalink</a>
+  <?php echo sep(); ?>
+
+  Shortlink: <a href="<?php the_shortlink();?>"><?php the_shortlink();?></a>
   </small>
   </header>
   <div class="post-text">

@@ -33,10 +33,18 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
   <?php echo render_partial("partials/footer");; ?>
 
   </footer>
+  <?php wp_footer(); ?>
+  <?php if(ENV == ENV_DEVELOPMENT): { ?>
+
   <?php echo javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"); ?>
 
   <?php echo javascript_include_tag("jquery.hashgrid"); ?>
 
+  <script type="text/javascript">
+  var grid = new hashgrid();
+  </script>
+<?php } ?>
+  <?php endif;; ?>
   <?php echo javascript_include_tag("main"); ?>
 
   </body>
