@@ -32,7 +32,11 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
   <a href="<?php the_permalink();?>">Permalink</a>
   <?php echo sep(); ?>
 
+  <?php if(the_shortlink()): { ?>
+
   Shortlink: <a href="<?php the_shortlink();?>"><?php the_shortlink();?></a>
+<?php } ?>
+  <?php endif;; ?>
   </small>
   </header>
   <div class="post-text">

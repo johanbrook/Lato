@@ -5,9 +5,11 @@ require_once '/Users/Johan/Sites/johanbrook_wp3/wp-content/plugins/wordless/vend
   <head>
   <meta charset="utf-8" />
   <!-- Title -->
-  <title><?php wp_title(" - ", true, "right"); ?>Johan Brook</title>
+  <title><?php wp_title("", true, "right"); ?></title>
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Stylesheet -->
   <?php echo stylesheet_link_tag("master"); ?>
 

@@ -149,15 +149,28 @@ code {
 }
 
 pre {
-	background-color: #222;
-	color: #fff;
+	//background-color: #222;
+	//color: #fff;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
 	padding: $lineheight 3%;
 	font-size: .9em;
+	position: relative;
 	
 	code {
 		background: none;
 		border: 0;
 		padding: 0;
+	}
+	
+	&::after {
+		display: block;
+		position: absolute;
+		right: 1%;
+		bottom: 0;
+		content: attr(class);
+		text-transform: uppercase;
+		@include rem(12);
 	}
 }
 
