@@ -24,7 +24,16 @@
 				
 		<?php endif; endif;?>
 		
-		<small class="meta">
+		- if(is_single()):
+		<p class="post-nav">
+			= previous_post_link("%link", "‹ Previous post");
+			= sep();
+			= next_post_link("%link", "Next post ›");
+		</p>
+		- endif;
+		
+		<p class="meta">	
+			<small>
 			<time datetime="<?php the_time("c");?>" title="<?php echo get_the_time_ago();?>" pubdate><?php the_time("F j");?></time>
 			= sep()
 			<a href="<?php the_permalink();?>">Permalink</a>
@@ -32,7 +41,8 @@
 			- if(the_shortlink()):
 				Shortlink: <a href="<?php the_shortlink();?>"><?php the_shortlink();?></a>
 			- endif;
-		</small>
+			</small>
+		</p>
 	</header>
 	
 	<div class="post-text">

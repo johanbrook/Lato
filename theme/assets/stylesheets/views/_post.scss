@@ -11,9 +11,14 @@
 		.meta {
 			font-family: $sans;
 			text-transform: uppercase;
-		}
-		small.meta {
 			font-size: .8em;
+		}
+		
+		.post-nav {
+			font-family: $sans;
+			text-transform: none;
+			text-align: right;
+			margin: 0;
 		}
 	}
 	
