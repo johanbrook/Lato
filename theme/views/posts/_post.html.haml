@@ -37,10 +37,6 @@
 			<time datetime="<?php the_time("c");?>" title="<?php echo get_the_time_ago();?>" pubdate><?php the_time("F j");?></time>
 			= sep()
 			<a href="<?php the_permalink();?>">Permalink</a>
-			= sep()
-			- if(the_shortlink()):
-				Shortlink: <a href="<?php the_shortlink();?>"><?php the_shortlink();?></a>
-			- endif;
 			</small>
 		</p>
 	</header>
