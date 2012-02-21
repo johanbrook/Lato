@@ -32,6 +32,10 @@ strong, figcaption {
 	font-family: $sans;
 }
 
+figcaption {
+	text-align: center;
+}
+
 del, figcaption {
 	color: $gray;
 }
