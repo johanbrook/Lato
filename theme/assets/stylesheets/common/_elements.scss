@@ -122,12 +122,15 @@ a {
 	color: $accent;
 	text-decoration: none;
 	position: relative;
+	padding: 0 2px;
 }
 
 a:hover {
-	color: darken($accent, 5%);
-	background-color: transparentize($accent, .95);
-	text-decoration: underline;
+	//color: darken($accent, 5%);
+	//background-color: transparentize($accent, .95);
+	background-color: $accent;
+	color: #fff;
+	text-decoration: none;
 }
 
 a:active {
