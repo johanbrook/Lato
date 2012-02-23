@@ -29,6 +29,15 @@
 		}
 	}
 	
+	[role="navigation"] {
+		max-width: none;
+		margin: $lineheight 0 0;
+		
+		li {
+			width: 24%;
+		}
+	}
+	
 	[role="main"],
 	.sidebar {
 		float: none;
@@ -59,20 +68,27 @@
 }
 
 
+/*	=SMALL SCREENS
+----------------------------------------------------------------------*/
+
 @media screen and (max-width: 45em){
 	body {
 		margin-left: 8%;
 		margin-right: 8%;
 	}
 	
-	[role="navigation"] {
-		max-width: none;
-		margin: $lineheight 0 0;
-		
-		li {
-			width: 24%;
-		}
+	.huge {
+		@include rem(28);
 	}
+	
+	[role="article"] header .post-nav {
+		text-align: center;
+	}
+	
+	.hide-mobile {
+		display: none;
+	}
+	
 	
 	.sidebar{
 		
