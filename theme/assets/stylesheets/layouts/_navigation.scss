@@ -23,6 +23,8 @@
 		a {
 			display: block;
 			line-height: $lineheight*2;
+			font-weight: bold;
+			@include smooth;
 			@include border-radius(.3em);
 			
 			&:hover {
