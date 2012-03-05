@@ -8,6 +8,7 @@
 	text-transform: uppercase;
 	@include smooth;
 	color: #fff;
+	-webkit-tap-highlight-color: transparent;
 	text-align: center;
 	
 	background-color: $basecolor;
@@ -23,6 +24,6 @@
 		top: 3px;
 		background-color: darken($basecolor, 4%);
 		color: #f6f6f6;
-		@include box-shadow(0 2px 0 darken($basecolor, 40%), 0 4px .3em rgba(0,0,0,.35));
+		@include box-shadow(0 2px 0 darken($basecolor, 30%), 0 4px .3em rgba(0,0,0,.35));
 	}
 }

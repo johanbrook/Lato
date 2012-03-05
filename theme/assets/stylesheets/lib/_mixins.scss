@@ -25,31 +25,6 @@
 }
 
 
-@mixin jb_button {
-	-webkit-tap-highlight-color: transparent;
-	@include smooth;
-	@include border-radius(.2em);
-	@include box-shadow(rgba(0,0,0, 0.1) 0 0 5px);
-	background-color: $accent;
-	padding: .1em .4em;
-	color: #fff;
-	font-family: $sans;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
-	
-	&:hover {
-		color: #fff;
-		text-decoration: none;
-		background-color: darken($accent, 5%);
-	}
-	
-	&:active {
-		top: auto;
-		@include box-shadow(inset rgba(0, 0, 0, 0.6) 0 1px .3em);
-	}
-}
-
 
 @mixin clearfix {
 	&::before,
