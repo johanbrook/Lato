@@ -3,8 +3,9 @@
 @media screen and (max-width: 70em){
 	
 	body {
-		margin: $lineheight 15%;
+		margin: 0 15% $lineheight;
 	}
+	
 	
 	[role="banner"] {
 		margin-bottom: $lineheight;
@@ -43,6 +44,8 @@
 		float: none;
 		width: auto;
 		margin: 0;
+		border-top: 0;
+		padding-top: 0;
 	}
 	
 	.sidebar {
@@ -107,10 +110,8 @@
 		}
 	}
 	
-	/* Make 'read more' links looks like buttons: */
-	.read-more {
-		@include jb_button;
-		display: block;
+	[role="article"] .read-more-container {
+		text-align: center;
 	}
 	
 	[role="contentinfo"] {

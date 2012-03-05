@@ -138,6 +138,7 @@ a:active {
 }
 
 a.read-more {
+	@extend .button;
 	font-size: 1.1em;
 }
 

@@ -13,8 +13,9 @@ $mono:			Inconsolata, Monaco, Courier, monospace;
 
 // Measures
 
+$spacing:		4%;
 $main_col:		61.8%;
-$side_col:		100% - $main_col;
+$side_col:		100% - $main_col - $spacing;
 
 // Typography
 

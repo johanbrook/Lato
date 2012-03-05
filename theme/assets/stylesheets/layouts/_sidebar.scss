@@ -3,6 +3,9 @@
 
 .sidebar {
 	text-align: center;
+	float: left;
+	width: $side_col;
+	margin-right: $spacing;
 	
 	h2 {
 		@include rem(12);
