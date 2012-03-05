@@ -15,8 +15,10 @@
 		<!-- Stylesheet -->
 		= stylesheet_link_tag("master")
 		
+		- if(ENV == ENV_DEVELOPMENT):
 		<!-- Hashgrid -->
 		= stylesheet_link_tag("hashgrid")
+		- endif;
 		<!--[if lt IE 9]>
 		= javascript_include_tag("http://html5shiv.googlecode.com/svn/trunk/html5.js")
 		<![endif]-->
