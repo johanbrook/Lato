@@ -17,6 +17,12 @@ task :coffee do
   puts "* CoffeeScript compiled"
 end
 
+desc "Clean the JS and CSS output dirs"
+task :clean do
+  puts `rm -rf ./assets/javascripts/main.js ./assets/stylesheets/master.css tmp/*`
+  puts "* Clean"
+end
+
 desc "Deploys to johanbrook.com. Auto-compile and commit all SCSS and Coffee files."
 task :deploy => [:sass, :coffee] do
   files = [
