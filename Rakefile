@@ -4,6 +4,11 @@ scss_file = "./theme/assets/stylesheets/master.scss"
 js_file = "./theme/assets/javascripts/main.coffee"
 output_dir = "./assets/"
 
+desc "Compile Sass and CoffeeScript"
+task :compile => [:clean, :sass, :coffee] do
+  
+end
+
 desc "Compile Sass for production"
 task :sass do
   puts `sass #{scss_file}:#{File.join output_dir, "stylesheets/master.css" } -r ./theme/assets/stylesheets/bourbon/lib/bourbon.rb -f -t compressed`
@@ -24,7 +29,7 @@ task :clean do
 end
 
 desc "Deploys to johanbrook.com. Auto-compile and commit all SCSS and Coffee files."
-task :deploy => [:sass, :coffee] do
+task :deploy => [:compile] do
   files = [
     "theme/assets/stylesheets",
     "theme/assets/javascripts",
