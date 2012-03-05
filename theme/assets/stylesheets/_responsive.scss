@@ -78,10 +78,15 @@
 	body {
 		margin-left: 8%;
 		margin-right: 8%;
+		@include rem(14);
 	}
 	
 	.huge {
 		@include rem(28);
+	}
+	
+	h1 {
+		@include rem(24);
 	}
 	
 	[role="article"] header .post-nav {
