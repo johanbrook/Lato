@@ -15,7 +15,7 @@ body {
 	margin: $lineheight*2 10%;
 	
 	color: $bodycolor;
-	-webkit-tap-highlight-color: $accent;
+	-webkit-tap-highlight-color: transparentize($accent, .5);
 }
 
 
