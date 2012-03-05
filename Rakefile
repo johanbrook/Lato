@@ -37,6 +37,7 @@ task :deploy => [:compile] do
     File.join(output_dir, "javascripts/main.js")
   ]
   
+  puts `git add assets`
   puts `git commit #{files.join(" ")} -m "*Deploy* (Force compile SCSS and CoffeeScript files)"`
         
   puts `git push origin master`
