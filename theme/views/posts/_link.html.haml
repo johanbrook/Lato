@@ -1,0 +1,23 @@
+<?php global $post;?>
+
+<article role="article" class="link">
+	<header>
+		<em title="This is a linked post. Clicking the heading will take you to the target" class="suphead">
+			<span class="label">Linked</span> <span class="link-url"><?php echo get_post_meta($post->ID, LINK, true);?></span>
+		</em>
+		<h1>
+			<?php echo link_to(get_the_title() . " →", 
+				get_post_meta($post->ID, LINK, true), 
+				array("title" => get_post_meta($post->ID, LINK_NAME, true))
+			); ?>
+		</h1>
+		
+		= render_partial("posts/post-header")
+	</header>
+	
+	<div class="post-text">
+	
+	= get_the_filtered_content();
+	
+	</div>
+</article>

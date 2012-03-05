@@ -13,8 +13,12 @@
 - if(have_posts())
 	- while(have_posts())
 		- the_post()
-	
-		= render_partial("posts/post")
+		
+		- if(get_post_format() == "link"):
+			= render_partial("posts/link")
+		- else:
+			= render_partial("posts/post")
+		- endif;
 
 <footer>
 	<p class="center">Check the <a href="<?php link_to_page("archive");?>">archive</a> for more posts</p>

@@ -1,5 +1,7 @@
 - the_post()
-= render_partial("posts/post")
 
-
-
+- if(get_post_format() == "link"):	
+	= render_partial("posts/link")
+- else:
+	= render_partial("posts/post")
+- endif;

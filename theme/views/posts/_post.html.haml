@@ -1,55 +1,27 @@
-<?php global $post;?>
-
-<article role="article" <?php if(get_post_format()) echo 'class="'.get_post_format().'"';?>>
+<article role="article">
 	<header>
-		<?php if(get_post_format() == "link"):?>
-		<em title="This is a linked post. Clicking the heading will take you to the target" class="suphead">
-			<span class="label">Linked</span> <span class="link-url"><?php echo get_post_meta($post->ID, LINK, true);?></span>
-		</em>
+		<?php if(is_single()):?>
 		<h1>
-			<?php echo link_to(get_the_title() . " →", 
-				get_post_meta($post->ID, LINK, true), 
-				array("title" => get_post_meta($post->ID, LINK_NAME, true))
-			); ?>
+			= the_title()
 		</h1>
 		<?php else: ?>
-			<?php if(is_single()):?>
-			<h1>
-				= the_title()
-			</h1>
-			<?php else:?>
-			<h1>
-				= link_to(get_the_title(), get_permalink())
-			</h1>
-				
-		<?php endif; endif;?>
+		<h1>
+			= link_to(get_the_title(), get_permalink())
+		</h1>
+		<?php endif; ?>
 		
-		- if(is_single()):
-		<p class="post-nav">
-			= previous_post_link("%link", "‹ Previous post");
-			= sep();
-			= next_post_link("%link", "Next post ›");
-		</p>
-		- endif;
+
+		= render_partial("posts/post-header")
 		
-		<p class="meta">	
-			<small>
-			<time datetime="<?php the_time("c");?>" title="<?php echo get_the_time_ago();?>" pubdate><?php the_time("F j");?></time>
-			= sep()
-			<a href="<?php the_permalink();?>">Permalink</a>
-			</small>
-		</p>
 	</header>
 	
 	<div class="post-text">
 	
-	<?php 
-		if(is_single() || get_post_format() == "link")
-			echo get_the_filtered_content();
-		else
-			the_excerpt();
-		
-		?>
+		- if(is_single()):
+			= get_the_filtered_content()
+		- else:
+			= the_excerpt()
+		- endif;
 	
 	</div>
 </article>
