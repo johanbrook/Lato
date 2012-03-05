@@ -29,6 +29,11 @@
 		header{
 			h1 {
 				@include rem(18);
+				
+				a:hover {
+					background-color: $bodycolor;
+					color: #fff;
+				}
 			}
 		}
 	}

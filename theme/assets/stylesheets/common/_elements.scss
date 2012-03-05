@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5 {
 	@include smooth;
 	
 	a:hover {
-		background: none;
+		background-color: inherit;
 	}
 }
 
@@ -126,8 +126,6 @@ a {
 }
 
 a:hover {
-	//color: darken($accent, 5%);
-	//background-color: transparentize($accent, .95);
 	background-color: $accent;
 	color: #fff;
 	text-decoration: none;
