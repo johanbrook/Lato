@@ -145,7 +145,7 @@ function jb_permalink_rss($content) {
 	
 	if(is_feed()) {
 		if($link !== '') {
-			$content = $link;
+			$content = "→ ".$link;
 		}
 		else {
 			$content = get_permalink($postid);
