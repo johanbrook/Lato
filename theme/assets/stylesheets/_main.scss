@@ -50,11 +50,11 @@ body {
 /* Text and image selection styling */
 
 ::selection{
-	background: $accent;
+	background: $bodycolor;
 	color: #fff;
 }
 ::-moz-selection{
-	background: $accent;
+	background: $bodycolor;
 	color: #fff;
 }
 
