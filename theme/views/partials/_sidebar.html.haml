@@ -29,6 +29,10 @@
 		</section>
 	- endif;
 	
+	- if(is_archive() || is_page("archive")):
+		= render_partial("partials/categories")
+	- endif;
+	
 	<section>
 		<ul class="list links">
 			<li><h2>Twitter</h2>

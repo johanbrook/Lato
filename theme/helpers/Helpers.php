@@ -54,7 +54,10 @@ function get_id_by_slug($page_slug) {
 *	List posts by month
 */
 
-function list_posts_by_month($list_class_name){
+function list_posts_by_month($outer_class_name, $inner_class_name=null){
+	if($inner_class_name == null)
+		$inner_class_name = $outer_class_name;
+		
 	// Declare some helper vars
 	$previous_year = $year = 0;
 	$previous_month = $month = 0;
@@ -63,7 +66,7 @@ function list_posts_by_month($list_class_name){
 	// Get the posts
 	$myposts = get_posts('numberposts=-1&orderby=post_date&order=DESC');
 	
-	echo '<ol class="'.$list_class_name.'">';
+	echo '<ol class="'.$outer_class_name.'">';
 	
 	?>
 
@@ -92,7 +95,7 @@ function list_posts_by_month($list_class_name){
 			
 			<h3><?php echo get_the_time($format, $p); ?></h3>
 
-			<ol class="<?php echo $list_class_name;?>">
+			<ol class="<?php echo $inner_class_name;?>">
 
 			<?php $ul_open = true; ?>
 
@@ -100,7 +103,10 @@ function list_posts_by_month($list_class_name){
 
 		<?php $previous_year = $year; $previous_month = $month; ?>
 
-		<li><a rel="bookmark" href="<?php echo get_permalink($p); ?>"><?php echo get_the_title($p); ?></a></li>
+		<li>
+			<small class="list-detail"><?php echo get_the_time("M j, Y", $p->ID);?></small>
+			<a rel="bookmark" href="<?php echo get_permalink($p); ?>"><?php echo get_the_title($p); ?></a>
+		</li>
 
 	<?php endforeach; ?>
 		</ol>

@@ -82,6 +82,36 @@
 	list-style: none;
 }
 
+.post-list {
+	@extend .list;
+	
+	li {
+		border-bottom: 1px solid #e2e2e2;
+		padding: .3em 0;
+		
+		&:last-child{
+			border: 0;
+		}
+		
+		&:hover .list-detail {
+			color: #666;
+		}
+	}
+	
+	.list-detail {
+		display: inline-block;
+		width: 15%;
+	}
+}
+
+.list-detail {
+	font-family: $sans;
+	color: #999;
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 
 /* Clearfix */
 

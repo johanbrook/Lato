@@ -93,8 +93,20 @@ h1, h2, h3, h4, h5 {
 	}
 }
 
+hgroup {
+	margin-bottom: $lineheight;
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
 .huge {
 	@include rem(39);
+}
+
+.sub {
+	@include rem(18);
+	color: $gray;
 }
 
 h1 {

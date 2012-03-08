@@ -11,5 +11,7 @@
 	<time datetime="<?php the_time("c");?>" title="<?php echo get_the_time_ago();?>" pubdate><?php the_time("F j");?></time>
 	= sep()
 	<a href="<?php the_permalink();?>">Permalink</a>
+	= sep()
+	Read more posts about <?php the_category(" and ", "multiple");?>
 	</small>
 </p>

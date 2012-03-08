@@ -1,0 +1,10 @@
+.category-list {
+	@include clearfix;
+	
+	ul {
+		@extend .columns-two;	
+		@include column-rule(0);
+		text-align: left;
+	}
+
+}

@@ -26,7 +26,7 @@ if (!class_exists("Wordless")) {
 $routes = array(
 	"single" => "posts/single",
 	"home" => "layouts/home",
-	"page('archive')" => "layouts/archive",
+	"page('archive')" => "layouts/posts",
 	"page('contact')" => "layouts/contact",
 	"archive" => "layouts/archive",
 	"page" => "layouts/page",

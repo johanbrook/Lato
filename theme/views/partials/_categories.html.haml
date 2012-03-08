@@ -1,0 +1,20 @@
+<?php
+	$categories = get_categories(array("orderby" => "name"));
+?>
+
+- if($categories):
+<section class="category-list">
+	<h2>Categories</h2>
+	
+	<ul class="list">
+		- foreach($categories as $c):
+		
+		<li <?php if($c->parent) echo 'class="child-category"'; ?>>
+			<a href="<?php echo get_category_link($c->term_id);?>"><?php echo $c->name;?></a>
+			<small class="list-detail"><?php echo $c->category_count;?></small>
+		</li>
+		
+		- endforeach;
+	</ul>
+</section>
+- endif;
