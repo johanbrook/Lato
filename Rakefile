@@ -39,7 +39,7 @@ desc "Deploys to johanbrook.com. Auto-compile and commit all SCSS and Coffee fil
 task :deploy => [:compile] do
   date = Time.now.strftime "%A %Y-%m-%d %H:%M"
   puts `git add #{files.join(" ")}`
-  puts `git commit #{files.join(" ")} -m "Deployed on #{date}"`
+  puts `git commit #{files.join(" ")} -m "Deployed to johanbrook.com on #{date}"`
         
   puts `git push origin master`
   puts "* Deployed"
