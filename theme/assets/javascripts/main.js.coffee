@@ -18,7 +18,7 @@ hideAddressBar = ->
 
 scrollToContentOnSingle = ->
 	if document.body.className.match /single/i
-		header_height = document.querySelector('[role="complementary"]').getBoundingClientRect().height
+		header_height = $('[role="complementary"]').get(0).getBoundingClientRect().height
 		scrollTo(0, header_height)
 
 
@@ -31,4 +31,5 @@ init = ->
 		scrollToContentOnSingle()
 
 
-document.addEventListener "DOMContentLoaded", init, false
+$(document).ready ->
+	init

@@ -1,0 +1,12 @@
+#github-commits {
+	font-family: $sans;
+	
+	li, .commit-message {
+		display: block;
+	}
+	
+	li {
+		border-bottom: 1px solid #e2e2e2;
+		padding: .3em 0;
+	}
+}

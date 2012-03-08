@@ -8,4 +8,18 @@
 	<div class="post-text">
 		= get_the_filtered_content()
 	</div>
+	
+	- if(is_page("projects")):
+		<section id="github-commits">
+			<h2>Latest theme updates</h2>
+			<p class="alignright">
+				<a href="http://github.com/johanbrook/lato">View theme page on GitHub</a>
+			</p>
+			<br class="clear" />
+			
+			<ul class="list">
+				<li class="no-content">Loading</li>
+			</ul>
+		</section>
+	- endif;
 </article>

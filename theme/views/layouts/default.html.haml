@@ -58,6 +58,56 @@
 - endif;
 
 
+= javascript_include_tag("zepto.min")
 = javascript_include_tag("main")
+
+<script type="text/html" id="github-commit">
+	<li>
+		<span class="commit-message">{{message}}</span>
+		<small class="list-detail">{{sha}}</small>
+	</li>
+</script>
+
+- if(is_page("projects")):
+<script type="text/javascript">
+	function template(string, d){
+		for(var p in d){
+			string = string.replace(new RegExp('{{'+p+'}}','g'), d[p]);
+		}
+		return string;
+	};
+
+	$(document).ready(function() {
+		var base = "https://api.github.com",
+			commit_endpoint = "/repos/johanbrook/lato/commits",
+			url = base+commit_endpoint+"?per_page=5&callback=?",
+			github_template = $("#github-commit").html();
+			
+		$.getJSON(url, show);
+		
+		function show(json) {
+			if(json.meta.status != 200) return;
+			
+			items = [];
+
+			$.each(json.data, function(){
+
+				var obj = {
+					name: this.commit.committer.name,
+					date: this.commit.committer.date,
+					message: this.commit.message,
+					url: this.url,
+					sha: this.sha.substring(0, 6)
+				};
+				
+				items.push(template(github_template, obj));
+			});
+
+			
+			$("#github-commits ul.list").html(items.join(""));
+		}
+	});
+</script>
+- endif;
 </body>
 </html>
