@@ -64,7 +64,7 @@
 <script type="text/html" id="github-commit">
 	<li>
 		<span class="commit-message">{{message}}</span>
-		<small class="list-detail">{{sha}}</small>
+		<small class="list-detail">{{sha}} <?php echo sep();?> {{date}}</small>
 	</li>
 </script>
 
@@ -92,12 +92,14 @@
 
 			$.each(json.data, function(){
 
+				var t = new Date(this.commit.committer.date);
+				
 				var obj = {
 					name: this.commit.committer.name,
-					date: this.commit.committer.date,
+					date: t.toDateString() + " " + t.toLocaleTimeString(),
 					message: this.commit.message,
 					url: this.url,
-					sha: this.sha.substring(0, 6)
+					sha: this.sha.substring(0, 6),
 				};
 				
 				items.push(template(github_template, obj));
