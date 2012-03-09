@@ -1,5 +1,14 @@
 #github-commits {
-	font-family: $sans;
+	
+	ul {
+		font-family: $mono;
+	}
+	
+	.hash {
+		@extend code;
+		font-weight: normal;
+		color: $bodycolor;
+	}
 	
 	li, .commit-message {
 		display: block;
@@ -7,6 +16,13 @@
 	
 	li {
 		border-bottom: 1px solid #e2e2e2;
-		padding: .3em 0;
+		padding: .5em 0;
+		margin-bottom: .5em;
+	}
+	
+	time {
+		font-family: $sans;
+		color: $gray;
+		@include rem(12);
 	}
 }

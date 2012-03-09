@@ -64,7 +64,11 @@
 <script type="text/html" id="github-commit">
 	<li>
 		<span class="commit-message">{{message}}</span>
-		<small class="list-detail">{{sha}} <?php echo sep();?> {{date}}</small>
+		<small>
+			<span class="hash" title="{{fullhash}}">{{sha}}</span> 
+			<?php echo sep();?>
+			<time datetime="{{fulldate}}" pubdate>{{date}}</time>
+		</small>
 	</li>
 </script>
 
@@ -100,6 +104,8 @@
 					message: this.commit.message,
 					url: this.url,
 					sha: this.sha.substring(0, 6),
+					fulldate: t.toISOString(),
+					fullhash: this.sha
 				};
 				
 				items.push(template(github_template, obj));
