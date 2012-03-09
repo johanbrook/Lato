@@ -1,7 +1,11 @@
 /* HELPER CLASSES */
 
-.ingress {
+.alternate {
 	color: $gray;
+}
+
+.ingress {
+	@extend .alternate;
 	font-size: 1.1em;
 	
 	strong {
@@ -11,13 +15,17 @@
 	}
 }
 
-
 .meta, .no-content {
-	color: $gray;
+	@extend .alternate;
+}
+
+.heading-detail {
+	@extend .alternate;
+	font-size: .8em;
 }
 
 .sep {
-	color: $gray;
+	@extend .alternate;
 	display: inline-block;
 	margin: 0 .3em;
 }
