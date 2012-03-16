@@ -8,7 +8,7 @@
 
 <p class="meta">	
 	<small>
-	<time datetime="<?php the_time("c");?>" title="<?php echo get_the_time_ago();?>" pubdate><?php the_time("F j");?></time>
+	<time datetime="<?php the_time("c");?>" title="<?php echo get_the_time("F j, Y – H:i") .", ". get_the_time_ago();?>" pubdate><?php jb_relative_time("F j");?></time>
 	= sep()
 	<a href="<?php the_permalink();?>">Permalink</a>
 	= sep()

@@ -49,6 +49,26 @@ function get_id_by_slug($page_slug) {
 
 
 
+/**
+*	Only show day + month when they are in the current year.
+*
+*/
+function get_jb_relative_time($format, $id=null){
+	if($id == null){
+		global $post;
+		$id = $post->ID;
+	}
+	
+	if(get_the_time("Y", $id) == date("Y"))
+		return get_the_time($format, $id);
+	else
+		return get_the_time($format . ", Y", $id);
+}
+
+function jb_relative_time($format, $id=null){
+	echo get_jb_relative_time($format, $id);
+}
+
 
 /**
 *	List posts by month
