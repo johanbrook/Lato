@@ -3,10 +3,14 @@
 img,
 object,
 embed,
-video,
-iframe {
+video {
 	max-width: 100%;
 	height: auto;
+}
+
+/* iframes don't like height: auto */
+iframe {
+	max-width: 100%;
 }
 
 p, ul, ol, blockquote, figure, pre, dl {
