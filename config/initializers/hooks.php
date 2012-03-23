@@ -7,6 +7,8 @@ add_filter( 'excerpt_more', 'read_more_link' );
 add_filter('the_permalink_rss', 'jb_permalink_rss');
 add_filter('the_content', 'jb_add_permalink_to_content');
 add_filter('the_excerpt_rss', 'jb_add_permalink_to_content');
+add_filter('the_title_rss', 'jb_rewrite_title_rss');
+
 add_filter('the_shortlink', 'my_shortlink', 10, 4 );
 add_filter('body_class','browser_body_class');
 
@@ -140,18 +142,19 @@ function show_ping($comment, $args, $depth){
 
 function jb_permalink_rss($content) {
 	global $wp_query;
+	
 	$postid = $wp_query->post->ID;
 	$link = get_post_meta($postid, LINK, true);
 	
 	if(is_feed()) {
-		if($link !== '') {
-			$content = "→ ".$link;
+		if(get_post_format($postid) == "link") {
+			$content = $link;
 		}
 		else {
 			$content = get_permalink($postid);
 		}
 	}
-	
+	error_log($content);
 	return $content;
 }
 
@@ -172,6 +175,22 @@ function jb_add_permalink_to_content($content){
 	}
 	
 	return $content;
+}
+
+
+/**
+*	Add a symbol prefix to linked posts
+*
+*/
+function jb_rewrite_title_rss($title) {
+	global $wp_query;
+	$postid = $wp_query->post->ID;
+	
+	if(is_feed() && get_post_format($postid)){
+		$title = "→ ". $title;
+	}
+	
+	return $title;
 }
 
 

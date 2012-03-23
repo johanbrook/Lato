@@ -9,7 +9,6 @@ define("GOOGLE_ANALYTICS_ID", "UA-4471592-8");
 define("ENV_DEVELOPMENT", 10);
 define("ENV_PRODUCTION", 1);
 
-
 $host = $_SERVER['HTTP_HOST'];
 $allowed_sites = array(
 	"johanbrook.dev",
