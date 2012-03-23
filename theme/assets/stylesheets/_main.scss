@@ -12,7 +12,7 @@ html{
 body {
 	@include clearfix;
 	font: normal #{$fontsize}/#{$ratio} $serif;
-	margin: 0 10% $lineheight*2;
+	margin: $lineheight*2 10%;
 	
 	color: $bodycolor;
 	-webkit-tap-highlight-color: transparentize($accent, .5);
@@ -27,13 +27,6 @@ body {
 		margin-bottom: $lineheight*3 - .2em;
 		border-bottom: .2em solid $accent;
 	}
-}
-
-[role="main"],
-.sidebar {
-	padding-top: $lineheight*2 - .4em;
-	margin-top: .3em;
-	border-top: .1em solid #aaa;
 }
 
 
