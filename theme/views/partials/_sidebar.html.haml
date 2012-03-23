@@ -33,6 +33,10 @@
 		= render_partial("partials/categories")
 	- endif;
 	
+	- if(is_page() || $post->post_parent):
+		= render_partial("partials/subpages")
+	- endif;
+	
 	<section>
 		<ul class="list links">
 			<li><h2>Twitter</h2>

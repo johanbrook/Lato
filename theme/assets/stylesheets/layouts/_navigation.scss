@@ -1,10 +1,15 @@
-[role="navigation"] {
+[role="navigation"],
+.subpages,
+.secondary-nav {
+	max-width: 70%;
 	font-family: $sans;
-	color: #9f9f9f;
 	text-transform: uppercase;
 	font-size: .8em;
+}
+
+[role="navigation"] {
+	color: #9f9f9f;
 	border-bottom: 3px double #ddd;
-	max-width: 70%;
 	margin: $lineheight*2 auto;
 	
 	li {
@@ -49,10 +54,6 @@
 	.secondary-nav {
 		$space: .3em;
 		
-		font-family: $sans;
-		text-transform: uppercase;
-		font-size: .8em;
-		
 		li {
 			margin-right: 4%;
 			
@@ -66,4 +67,25 @@
 		}
 	}
 	
+}
+
+.subpages {
+	margin: 0 auto;
+	
+	li:first-child a{
+		@include border-radius(.3em .3em 0 0);
+	}
+	li:last-child a {
+		@include border-radius(0 0 .3em .3em);
+	}
+	
+	a {
+		display: block;
+		padding: .3em 0;
+		
+		&.current_page_item {
+			background-color: $accent;
+			color: #fff;
+		}
+	}
 }

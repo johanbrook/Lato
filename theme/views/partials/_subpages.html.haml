@@ -1,0 +1,28 @@
+<?php
+	global $post;
+	
+	if($post->post_parent) {
+		$args = array(
+			"child_of" => $post->post_parent
+		);
+	}
+	else {
+		$args = array(
+			"child_of" => $post->ID
+		);
+	}
+	
+	$pages = get_pages($args);
+?>
+- if($pages):
+	<ul class="subpages list">
+	- foreach($pages as $page):
+		
+		<li><a <?php if($post->ID == $page->ID) echo 'class="current_page_item"' ?> href="<?php echo get_permalink($page);?>">
+			<?php echo $page->post_title;?>
+		</a></li>
+
+	- endforeach;
+	
+	</ul>
+- endif;
