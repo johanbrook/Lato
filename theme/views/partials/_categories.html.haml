@@ -11,7 +11,7 @@
 		
 		<li <?php if($c->parent) echo 'class="child-category"'; ?>>
 			<a href="<?php echo get_category_link($c->term_id);?>"><?php echo $c->name;?></a>
-			<small class="list-detail"><?php echo $c->category_count;?></small>
+			<small class="list-detail"><?php echo $c->count;?></small>
 		</li>
 		
 		- endforeach;
