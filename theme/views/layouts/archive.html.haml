@@ -1,4 +1,7 @@
-- global $wp_query
+<?php
+	global $wp_query, $query_string;
+	query_posts($query_string . "&posts_per_page=-1");
+?>
 
 <hgroup>
 - if(is_category()):
