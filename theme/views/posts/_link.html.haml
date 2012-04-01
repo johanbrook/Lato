@@ -3,7 +3,7 @@
 <article role="article" class="link">
 	<header>
 		<em title="This is a linked post. Clicking the heading will take you to the target" class="suphead">
-			<span class="label">Linked</span> <span class="link-url"><?php echo get_post_meta($post->ID, LINK, true);?></span>
+			<?php linked_label();?> <span class="link-url"><?php echo get_post_meta($post->ID, LINK, true);?></span>
 		</em>
 		<h1>
 			<?php echo link_to(get_the_title() . " →", 

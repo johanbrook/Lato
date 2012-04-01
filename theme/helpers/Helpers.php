@@ -1,5 +1,18 @@
 <?php
 
+function linked_label($atts = null) {
+	$defaults = array(
+		"title" => "A linked post",
+		"class" => "label"
+	);
+	$attr = wp_parse_args($atts, $defaults);
+	
+	if(strpos($attr['class'], "label") === false)
+		$attr['class'] .= " label";
+		
+	echo content_tag("span", "Linked", $attr);
+}
+
 function sep($symbol = "&middot;"){
 	return '<span class="sep">'.$symbol.'</span>';
 }
@@ -90,10 +103,10 @@ function list_posts_by_month($outer_class_name, $inner_class_name=null){
 	
 	?>
 
-	<?php foreach($myposts as $p) : ?>	
+	<?php foreach($myposts as $p) : ?>
 
 		<?php
-
+		
 		$year = mysql2date('Y', $p->post_date);
 		$month = mysql2date('n', $p->post_date);
 		$day = mysql2date('j', $p->post_date);
@@ -122,11 +135,15 @@ function list_posts_by_month($outer_class_name, $inner_class_name=null){
 		<?php endif; ?>
 
 		<?php $previous_year = $year; $previous_month = $month; ?>
+			
+			<?php #TODO Duplicate code here. Need to fix.?>
+			
+			<li>
+				<small class="list-detail"><?php echo get_the_time("M j, Y", $p->ID);?></small>
+				<a rel="bookmark" href="<?php the_permalink();?>"><?php echo get_the_title($p->ID);?></a>
+				<?php if(get_post_format($p->ID) == "link") linked_label(array("class" => "list-right")); ?>
+			</li>
 
-		<li>
-			<small class="list-detail"><?php echo get_the_time("M j, Y", $p->ID);?></small>
-			<a rel="bookmark" href="<?php echo get_permalink($p); ?>"><?php echo get_the_title($p); ?></a>
-		</li>
 
 	<?php endforeach; ?>
 		</ol>

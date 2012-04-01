@@ -31,6 +31,25 @@
 }
 
 
+.label {
+	text-transform: uppercase;
+	font-family: $sans;
+	@include rem(10);
+	color: #fff;
+	@include border-radius(.2em);
+	background-color: $accent;
+	padding: 1px .3em;
+	border: 1px solid transparent;
+	cursor: help;
+	
+	&:hover {
+		background-color: darken($accent, 10%);
+		border-color: darken($accent, 20%);
+	}
+}
+
+
+
 .suphead {
 	font-family: $sans;
 	font-style: normal;
@@ -38,21 +57,6 @@
 	position: relative;
 	cursor: help;
 	display: block;
-	
-	.label {
-		text-transform: uppercase;
-		color: #fff;
-		font-size: .8em;
-		@include border-radius(.2em);
-		background-color: $accent;
-		padding: 1px .3em;
-		border: 1px solid transparent;
-		
-		&:hover {
-			background-color: darken($accent, 10%);
-			border-color: darken($accent, 20%);
-		}
-	}
 	
 	.link-url {
 		@include transition(width, .7s, cubic-bezier(0.190, 1.000, 0.220, 1.000), .8s);
@@ -75,11 +79,6 @@
 
 
 
-.more-link::after {
-	
-}
-
-
 /* Lists */
 
 .horizontal li{
@@ -96,6 +95,7 @@
 	li {
 		border-bottom: 1px solid #e2e2e2;
 		padding: .3em 0;
+		position: relative;
 		
 		&:last-child{
 			border: 0;
@@ -110,7 +110,13 @@
 		display: inline-block;
 		width: 15%;
 	}
+	
+	.list-right {
+		right: 0;
+		position: absolute;
+	}
 }
+
 
 .list-detail {
 	font-family: $sans;
@@ -118,6 +124,20 @@
 	font-size: .8em;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+
+/*	=ARCHIVE LIST
+----------------------------------------------------------------------*/
+
+.archive-list.post-list {
+	.label {
+		background-color: #bbb;
+	}
+	
+	li:hover .label {
+		background-color: $accent;
+	}
 }
 
 
