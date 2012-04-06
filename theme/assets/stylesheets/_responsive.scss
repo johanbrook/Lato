@@ -1,40 +1,45 @@
+
+
+/*	=MEDIUM SCREENS, like tablets
+----------------------------------------------------------------------*/
+
+
 @media screen and (max-width: 60em){
 	
 	body {
-		margin: 0 15% $lineheight;
+		margin: 0 10% $lineheight;
 	}
 	
 	
 	[role="banner"] {
 		margin-bottom: $lineheight;
+		float: left;
+		position: relative;
+		top: $lineheight;
 		
 		h1 {
-			margin: 0;
-			height: auto;
-			width: auto;
-		}
-		
-		h1 a{
-			background: none;
-			color: $bodycolor;
-			line-height: 1;
-			display: inline;
-			height: auto;
-			
-			&:hover{
-				color: inherit;
-				background: inherit;
-			}
+			@include transition(width .2s ease-out);
 		}
 	}
 	
 	[role="navigation"] {
 		max-width: none;
 		margin: $lineheight 0 0;
+		text-align: left;
 		
 		li {
-			width: 24%;
+			width: 16%;
+			margin:	0;
+			text-align: center;
 		}
+	}
+	
+	[role="complementary"] {
+		float: left;
+		width: 75%;
+		padding-left: 5%;
+		position: relative;
+		top: 1em;
 	}
 	
 	[role="main"],
@@ -46,10 +51,16 @@
 		padding-top: 0;
 	}
 	
+	.hide-medium {
+		display: none;
+	}
+	
 	.sidebar {
+		@include clearfix;
 		
 		section {
 			width: 100%;
+			margin-top: 1em;
 		}
 		
 		.links {
@@ -69,7 +80,7 @@
 }
 
 
-/*	=SMALL SCREENS
+/*	=SMALL SCREENS (inherits from 'Medium Screens')
 ----------------------------------------------------------------------*/
 
 @media screen and (max-width: 45em){
@@ -77,6 +88,41 @@
 		margin-left: 8%;
 		margin-right: 8%;
 		@include rem(14);
+	}
+	
+	.sidebar {
+		margin-bottom: $lineheight*2 + .618em; 		// Fix the vertical rhythm
+	}
+	
+	[role="banner"] {
+		h1 {
+			$size: 4.235em;
+			height: $size;
+			width: $size;
+		}
+		h1 a {
+			@include rem(13);
+			padding-top: 2em;
+			font-weight: bolder;
+			letter-spacing: 1px;
+			line-height: 1.618;
+		}
+	}
+	
+	[role="complementary"] {
+		width: 70%;
+	}
+	
+	[role="navigation"] {
+		border: 0;
+		
+		ul {
+			@include clearfix;
+		}
+		li {
+			width: 33%;
+			float: left;
+		}
 	}
 	
 	.huge {

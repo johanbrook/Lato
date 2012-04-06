@@ -1,5 +1,6 @@
 .button {
 	$basecolor: $accent;
+	$base-box-shadow: 0 5px 0 darken($basecolor, 20%), 0 6px .5em rgba(0,0,0,.35);
 	
 	display: inline-block;
 	position: relative;
@@ -14,10 +15,11 @@
 	background-color: $basecolor;
 	padding: 0 1em;
 	@include border-radius(3px);
-	@include box-shadow(0 5px 0 darken($basecolor, 20%), 0 6px .5em rgba(0,0,0,.35));
+	@include box-shadow($base-box-shadow);
 	
 	&:hover {
 		background-color: saturate(lighten($basecolor, 1%), 10%);
+		@include box-shadow($base-box-shadow, rgba($basecolor, .3) 0 0 7px);
 	}
 	
 	&:active {
