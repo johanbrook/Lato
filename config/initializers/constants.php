@@ -2,7 +2,7 @@
 define("LINK", "jb_link");
 define("LINK_NAME", "jb_link_name");
 
-define("EXCERPT_LENGTH", 40);
+define("EXCERPT_LENGTH", 120);
 
 define("GOOGLE_ANALYTICS_ID", "UA-4471592-8");
 
