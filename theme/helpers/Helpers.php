@@ -140,7 +140,7 @@ function list_posts_by_month($outer_class_name, $inner_class_name=null){
 			
 			<li>
 				<small class="list-detail"><?php echo get_the_time("M j, Y", $p->ID);?></small>
-				<a rel="bookmark" href="<?php the_permalink();?>"><?php echo get_the_title($p->ID);?></a>
+				<a rel="bookmark" href="<?php echo get_permalink($p->ID);?>"><?php echo get_the_title($p->ID);?></a>
 				<?php if(get_post_format($p->ID) == "link") linked_label(array("class" => "list-right")); ?>
 			</li>
 
