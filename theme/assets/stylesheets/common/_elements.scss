@@ -88,10 +88,9 @@ td, th {
 /* HEADINGS */
 
 h1, h2, h3, h4, h5 {
-	font-family: $sans;
-	font-weight: bold;
+	font-family: Bitter, Arvo, Rockwell, $sans;
+	font-weight: normal;
 	color: #000;
-	@include smooth;
 	
 	a:hover {
 		background-color: inherit;
@@ -125,10 +124,11 @@ h2 {
 
 h3 {
 	@include rem(18);
-	color: $gray;
 }
 
 h4 {
+	font-family: $sans;
+	@include smooth;
 	@include rem(14);
 }
 

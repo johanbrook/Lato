@@ -11,6 +11,9 @@
 	
 	h2 {
 		@include rem(12);
+		@include smooth;
+		font-weight: bold;
+		font-family: $sans;
 		color: #444;
 		text-transform: uppercase;
 	}
