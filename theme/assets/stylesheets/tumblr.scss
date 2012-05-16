@@ -1,0 +1,116 @@
+@import "bourbon/bourbon";
+@import "variables";
+@import "lib/mixins";
+
+/*	=CUSTOM TUMBLR STYLING
+----------------------------------------------------------------------*/
+
+body {
+	margin: $lineheight*2 auto;
+	@include rem(17);
+	line-height: 1.7;
+	max-width: 60%;
+}
+
+
+[role="banner"] {
+	text-align: center;
+	
+	h1 {
+		height: auto;
+		width: 100%;
+		@include rem(60);
+		
+		a {
+			@include border-radius(0);
+			background: transparent;
+			color: $bodycolor;
+			line-height: 1;
+			font-size: 1em;
+			@include smooth(off);			
+			
+			&:hover{
+				background: transparent;
+			}
+		}
+	}
+	
+	h2 {
+		font-family: $sans;
+		color: #888;
+		
+		i {
+			color: #aaa;
+		}
+	}
+}
+
+[role="navigation"] {
+	text-align: center;
+	padding: 0 5%;
+	max-width: none;
+	
+	li {
+		width: 16%;
+	}
+}
+
+.sidebar, [role="main"] {
+	float: none;
+	width: 100%;
+}
+
+[role="main"] {
+	margin-top: $lineheight*2;
+}
+
+[role="complementary"] {
+	
+	ul {
+		@include clearfix;
+	}
+	
+	.links li {
+		float: left;
+		width: 33%;
+	}
+	
+	section {
+		margin-top: $lineheight;
+	}
+}
+
+@media screen and (max-width: 60em) {
+	[role="navigation"] {
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 45em) {
+	body {
+		max-width: 70%;
+	}
+	[role="banner"] {
+		float: none;
+		top: auto;
+		
+		h1 a {
+			padding: 0;
+			font-weight: normal;
+		}
+	}
+	
+	[role="navigation"] {
+		padding: 0;
+		margin-top: $lineheight;
+		
+		li {
+			width: 33%;
+		}
+	}
+	
+	[role="complementary"] {
+		display: none;
+	}
+
+}
