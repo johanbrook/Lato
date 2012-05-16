@@ -1,6 +1,5 @@
 /*	=CUSTOM TUMBLR STYLING
 ----------------------------------------------------------------------*/
-/* line 8, ../../theme/assets/stylesheets/tumblr.scss */
 body {
   margin: 3.2em auto;
   font-size: 17px;
@@ -10,11 +9,9 @@ body {
   max-width: 60%;
 }
 
-/* line 16, ../../theme/assets/stylesheets/tumblr.scss */
 [role="banner"] {
   text-align: center;
 }
-/* line 19, ../../theme/assets/stylesheets/tumblr.scss */
 [role="banner"] h1 {
   height: auto;
   width: 100%;
@@ -23,7 +20,6 @@ body {
   font-size: 3.75rem;
   line-height: 1.168;
 }
-/* line 24, ../../theme/assets/stylesheets/tumblr.scss */
 [role="banner"] h1 a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -36,103 +32,83 @@ body {
   font-size: 1em;
   -webkit-font-smoothing: subpixel-antialiased;
 }
-/* line 32, ../../theme/assets/stylesheets/tumblr.scss */
 [role="banner"] h1 a:hover {
   background: transparent;
 }
-/* line 38, ../../theme/assets/stylesheets/tumblr.scss */
 [role="banner"] h2 {
   font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
   color: #888;
 }
-/* line 42, ../../theme/assets/stylesheets/tumblr.scss */
 [role="banner"] h2 i {
   color: #aaa;
 }
 
-/* line 48, ../../theme/assets/stylesheets/tumblr.scss */
 [role="navigation"] {
   text-align: center;
   padding: 0 5%;
   max-width: none;
 }
-/* line 53, ../../theme/assets/stylesheets/tumblr.scss */
 [role="navigation"] li {
   width: 16%;
 }
 
-/* line 58, ../../theme/assets/stylesheets/tumblr.scss */
 .sidebar, [role="main"] {
   float: none;
   width: 100%;
 }
 
-/* line 63, ../../theme/assets/stylesheets/tumblr.scss */
 [role="main"] {
   margin-top: 3.2em;
 }
 
-/* line 69, ../../theme/assets/stylesheets/tumblr.scss */
 [role="complementary"] ul {
   /* For IE 6/7 (trigger hasLayout) */
 }
-/* line 31, ../../theme/assets/stylesheets/lib/_mixins.scss */
 [role="complementary"] ul::before, [role="complementary"] ul::after {
   content: "";
   display: table;
 }
-/* line 36, ../../theme/assets/stylesheets/lib/_mixins.scss */
 [role="complementary"] ul::after {
   clear: both;
 }
-/* line 41, ../../theme/assets/stylesheets/lib/_mixins.scss */
 [role="complementary"] ul {
   zoom: 1;
 }
-/* line 73, ../../theme/assets/stylesheets/tumblr.scss */
 [role="complementary"] .links li {
   float: left;
   width: 33%;
 }
-/* line 78, ../../theme/assets/stylesheets/tumblr.scss */
 [role="complementary"] section {
   margin-top: 1.6em;
 }
 
 @media screen and (max-width: 60em) {
-  /* line 84, ../../theme/assets/stylesheets/tumblr.scss */
   [role="navigation"] {
     padding-right: 0;
   }
 }
 @media screen and (max-width: 45em) {
-  /* line 90, ../../theme/assets/stylesheets/tumblr.scss */
   body {
     max-width: 70%;
   }
 
-  /* line 93, ../../theme/assets/stylesheets/tumblr.scss */
   [role="banner"] {
     float: none;
     top: auto;
   }
-  /* line 97, ../../theme/assets/stylesheets/tumblr.scss */
   [role="banner"] h1 a {
     padding: 0;
     font-weight: normal;
   }
 
-  /* line 103, ../../theme/assets/stylesheets/tumblr.scss */
   [role="navigation"] {
     padding: 0;
     margin-top: 1.6em;
   }
-  /* line 107, ../../theme/assets/stylesheets/tumblr.scss */
   [role="navigation"] li {
     width: 33%;
   }
 
-  /* line 112, ../../theme/assets/stylesheets/tumblr.scss */
   [role="complementary"] {
     display: none;
   }
