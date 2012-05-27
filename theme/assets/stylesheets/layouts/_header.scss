@@ -26,11 +26,13 @@
 			background-color: $bodycolor;
 		}
 		
-		&.gotohome {
-			background-image: url("../images/home.svg");
-			background-repeat: no-repeat;
-			background-position: center center;
-			text-indent: -999em;
+		@media only screen and (min-width: 45em) {
+			&.gotohome {
+				background-image: url("../images/home.svg");
+				background-repeat: no-repeat;
+				background-position: center center;
+				text-indent: -999em;
+			}
 		}
 	}
 }
