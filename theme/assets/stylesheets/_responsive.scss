@@ -51,6 +51,12 @@
 		display: none;
 	}
 	
+	[role="article"] {
+		header .meta {
+			font-size: 1em;
+		}
+	}
+	
 	.sidebar {
 		@include clearfix;
 		
