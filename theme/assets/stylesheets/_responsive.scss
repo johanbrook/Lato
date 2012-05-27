@@ -16,10 +16,6 @@
 		float: left;
 		position: relative;
 		top: $lineheight;
-		
-		h1 {
-			@include transition(width .2s ease-out);
-		}
 	}
 	
 	[role="navigation"] {
@@ -91,39 +87,54 @@
 	}
 	
 	.sidebar {
-		margin-bottom: $lineheight*2 + .618em; 		// Fix the vertical rhythm
+		margin-bottom: $lineheight + .618em; 		// Fix the vertical rhythm
+	}
+	
+	[role="complementary"], [role="banner"] {
+		float: none;
+		width: 100%;
+	}
+	
+	[role="complementary"] {
+		padding: 0;
+		margin: $lineheight*2 0 0;
 	}
 	
 	[role="banner"] {
 		h1 {
-			$size: 4.235em;
-			height: $size;
-			width: $size;
+			height: auto;
+			width: 100%;
+			@include rem(28);
+
+			a {
+				@include border-radius(0);
+				background: transparent;
+				color: $bodycolor;
+				line-height: 1;
+				font-size: 1em;
+				@include smooth(off);			
+
+				&:hover{
+					background: transparent;
+				}
+			}
 		}
-		h1 a {
-			@include rem(13);
-			padding-top: 2em;
-			font-weight: bolder;
-			letter-spacing: 1px;
-			line-height: 1.618;
-		}
-	}
-	
-	[role="complementary"] {
-		width: 69%;
 	}
 	
 	[role="navigation"] {
 		border: 0;
+		@include rem(13);
+
 		
 		ul {
-			@include clearfix;
+			text-align: center;
 		}
+		
 		li {
-			width: 33%;
-			float: left;
+			width: 32%;
 		}
 	}
+
 	
 	.huge {
 		@include rem(28);
