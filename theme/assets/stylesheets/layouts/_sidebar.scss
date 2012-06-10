@@ -32,7 +32,25 @@
 	section {
 		color: lighten($gray, 10%);
 		@include rem(14, false);
-		width: 80%;
-		margin: $lineheight*2 auto 0;
+		margin: $lineheight*2 0 0;
+	}
+	
+	.links a, .subpages a {
+		color: $gray;
+		@include transition(color 3s);
+	}
+}
+
+[role="complementary"] {
+	max-width: 70%;
+	margin: 0 auto;
+	
+	&:hover .subpages a,
+	&:hover .links a {
+		color: $accent;
+
+		&:hover {
+			color: #fff;
+		}
 	}
 }

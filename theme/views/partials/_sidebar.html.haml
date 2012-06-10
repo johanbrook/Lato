@@ -15,8 +15,16 @@
 		<?php wp_nav_menu(array(
 			"theme_location" => "main_menu",
 			"container" => false,
-			"items_wrap" => '<ul>%3$s</ul>'
+			"items_wrap" => '<ul class="main-nav">%3$s</ul>'
 		));?>
+		
+		- if(is_archive() || is_page("archive")):
+			= render_partial("partials/categories")
+		- endif;
+
+		- if(is_page() || $post->post_parent):
+			= render_partial("partials/subpages")
+		- endif;
 	</nav>
 	
 	- if(is_single()):
@@ -31,13 +39,6 @@
 		</section>
 	- endif;
 	
-	- if(is_archive() || is_page("archive")):
-		= render_partial("partials/categories")
-	- endif;
-	
-	- if(is_page() || $post->post_parent):
-		= render_partial("partials/subpages")
-	- endif;
 	
 	<section>
 		<ul class="list links">

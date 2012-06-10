@@ -1,5 +1,6 @@
 .category-list {
 	@include clearfix;
+	text-transform: none;
 	
 	ul {
 		@extend .columns-two;	
