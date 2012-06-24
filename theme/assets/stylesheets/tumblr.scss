@@ -7,9 +7,9 @@
 
 body {
 	margin: $lineheight*2 auto;
-	@include rem(17);
-	line-height: 1.7;
-	max-width: 60%;
+	@include rem(16);
+	line-height: 1.618;
+	max-width: 50%;
 }
 
 
@@ -88,11 +88,16 @@ body {
 
 @media screen and (max-width: 45em) {
 	body {
-		max-width: 70%;
+		max-width: 80%;
+		@include rem(15);
 	}
 	[role="banner"] {
 		float: none;
 		top: auto;
+		
+		h1 {
+			font-size: 3em;
+		}
 		
 		h1 a {
 			padding: 0;
@@ -105,7 +110,7 @@ body {
 		margin-top: $lineheight;
 		
 		li {
-			width: 33%;
+			width: 32%;
 		}
 	}
 	
