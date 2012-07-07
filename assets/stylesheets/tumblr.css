@@ -463,7 +463,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 3.2em;
   border-bottom: 1px dotted #ddd; }
   [role="article"] header {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 3.2em; }
     [role="article"] header h1 {
       font-size: 1.1em; }
     [role="article"] header time {
