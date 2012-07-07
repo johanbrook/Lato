@@ -483,21 +483,6 @@ h1, h2, h3, h4, h5, h6 {
 [role="main"] {
   margin-top: 3.2em; }
 
-[role="complementary"] ul {
-  /* For IE 6/7 (trigger hasLayout) */ }
-  [role="complementary"] ul::before, [role="complementary"] ul::after {
-    content: "";
-    display: table; }
-  [role="complementary"] ul::after {
-    clear: both; }
-  [role="complementary"] ul {
-    zoom: 1; }
-[role="complementary"] .links li {
-  float: left;
-  width: 33%; }
-[role="complementary"] section {
-  margin-top: 1.6em; }
-
 blockquote {
   margin: 0 5% 1.6em;
   color: #888888; }
@@ -509,5 +494,13 @@ blockquote {
   body {
     margin-top: 0; }
 
+  [role="banner"] {
+    padding-bottom: 0;
+    border-bottom: 1px dotted #ddd; }
+
   [role="navigation"] li {
-    margin: 0 1em; } }
+    margin: 0 .5em; }
+
+  [role="article"] {
+    margin-bottom: 3.2em;
+    padding-bottom: 1.6em; } }

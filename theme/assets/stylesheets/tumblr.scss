@@ -117,22 +117,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: $lineheight*2;
 }
 
-[role="complementary"] {
-	
-	ul {
-		@include clearfix;
-	}
-	
-	.links li {
-		float: left;
-		width: 33%;
-	}
-	
-	section {
-		margin-top: $lineheight;
-	}
-}
-
 blockquote {
 	margin: 0 5% $lineheight;
 	color: $gray;
@@ -152,15 +136,19 @@ blockquote {
 		margin-top: 0;
 	}
 	
+	[role="banner"] {
+		padding-bottom: 0;
+		border-bottom: 1px dotted #ddd;
+	}
+	
 	[role="navigation"] {
 		li {
-			margin: 0 1em;
+			margin: 0 .5em;
 		}
 	}
 		
 	[role="article"] {
-		.post-text {
-			
-		}
+		margin-bottom: $lineheight*2;
+		padding-bottom: $lineheight;
 	}
 }
