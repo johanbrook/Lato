@@ -490,6 +490,9 @@ blockquote {
 .meta {
   color: #888888; }
 
+[role="contentinfo"] {
+  text-align: center; }
+
 @media screen and (max-width: 60em) {
   body {
     margin-top: 0; }
