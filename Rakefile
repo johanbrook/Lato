@@ -1,13 +1,16 @@
 require "rake"
 
 scss_file = "./theme/assets/stylesheets/master.scss"
+tumblr_file = "./theme/assets/stylesheets/tumblr.scss"
 coffee_file = "./theme/assets/javascripts/main.js.coffee"
 css_file = "./assets/stylesheets/master.css"
+tumblr_out_file = "./assets/stylesheets/tumblr.css"
 js_file = "./assets/javascripts/main.js"
 
 files = [
   css_file,
-  js_file
+  js_file,
+  tumblr_out_file
 ]
 
 desc "Compile Sass and CoffeeScript"
@@ -19,6 +22,12 @@ desc "Compile Sass for production"
 task :sass do
   puts `sass #{scss_file}:#{css_file} -r ./theme/assets/stylesheets/bourbon/lib/bourbon.rb -f -t compressed`
   puts "* #{File.basename scss_file} compiled for production to #{File.basename css_file}"
+end
+
+desc "Compile the stand-alone Tumblr Sass file"
+task :tumblr do
+  puts `sass #{tumblr_file}:#{tumblr_out_file} --style compressed`
+  puts "* Tumblr file compiled for production"
 end
 
 
