@@ -280,7 +280,11 @@ ul,
 ol {
 	margin: 0;
 	padding: 0;
-	list-style: outside square;
+	list-style: outside;
+}
+
+ul {
+	list-style-type: square;
 }
 
 nav ul,
