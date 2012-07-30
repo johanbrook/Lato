@@ -26,6 +26,15 @@ embed {
 	height: auto;
 }
 
+hr {
+	border: 0;
+	height: 1px;
+	display: block;
+	background-color: #EEE;
+	margin: $lineheight*2 auto;
+	width: 50%;
+}
+
 
 a {
 	color: $accent;
@@ -123,7 +132,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 blockquote {
-	margin: 0 5% $lineheight;
+	margin: 0 5% $lineheight 0;
+	border-left: 2px solid #EEE;
+	padding-left: 5%;
+	color: #999;
+
+	&:hover {
+		color: $bodycolor;
+	}
 }
 
 .meta {
