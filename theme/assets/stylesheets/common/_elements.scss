@@ -57,6 +57,10 @@ blockquote {
 		font-size: .9em;
 		font-style: italic;
 		color: $bodycolor;
+
+		&::before {
+			content: "– ";
+		}
 	}
 }
 
